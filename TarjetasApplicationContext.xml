@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/config/tiles-defs.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="enviroment" class="com.ts.configuracion.Enviroment" init-method="">
+	
+		<property name="wsParaValidarTarjeta" value="http://localhost:8080/Tarjetas/validarTarjetas" />
+		<property name="claveMail" value="abc$1234" />
+	  	<property name="direccionMail" value="tools@testingsoft.com" />
+	  	<property name="stmpHost" value="smtp.gmail.com" />
+	  	<property name="stmpTlsEnabled" value="true" />
+	  	<property name="stmpPort" value="587" />
+	  	<property name="stmpAuth" value="true" />
+		<property name="urlBackOffice" value="http://localhost:8080/BackOffice" />
+		<property name="urlTarjeta" value="http://localhost:8080" />
+		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
+		<property name="jasperServer" value="http://localhost:8282/jasperserver/flow.html?_flowId=viewReportFlow" />
+		
+		<property name="codigoEconomia" value="840" />
+		<property name="commerceMallId" value="1" />
+		<property name="codigoAdquirenteTesting" value="99" />
+		<property name="codigoAdquirenteProduccion" value="12" />
+		<property name="codigoComercioProduccion" value="Hey Que pedirlo" />
+		<property name="codigoComercioTesting" value="7480" />
+		<property name="codigoMall" value="1" />
+		<property name="codigoTerminal" value="00000000" />
+		<property name="produccion" value="false" />
+		<property name="urlPruebasTarjetas" value="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" />
+		<property name="urlProduccionTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
+		
+		<property name="alignetSignaturePublicProduccion" value="/.comercio/ALIGNET.PRODUCCION.NOPHP.SIGNATURE.PUBLIC.txt" />	
+		<property name="alignetCryptoPublicProduccion" value="/.comercio/ALIGNET.PRODUCCION.NOPHP.CRYPTO.PUBLIC.txt" />
+		
+		<property name="cryptoPublicProduccion" value="/.comercio/COMERCIO.PRODUCCION.CRYPTO.PUBLIC.txt" />
+		<property name="signaturePrivateProduccion" value="/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PRIVATE.txt" />	
+		<property name="signaturePublicProduccion" value="/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PUBLIC.txt" />
+		<property name="cryptoPrivateProduccion" value="/.comercio/COMERCIO.PRODUCCION.CRYPTO.PRIVATE.txt" />
+		
+		<property name="alignetCryptoPublicTesting" value="/.comercio/ALIGNET.TESTING.NOPHP.CRYPTO.PUBLIC.txt" />
+		<property name="alignetSignaturePublicTesting" value="/.comercio/ALIGNET.TESTING.NOPHP.SIGNATURE.PUBLIC.txt" />
+		
+		<property name="cryptoPublicTesting" value="/.comercio/COMERCIO.TESTING.CRYPTO.PUBLIC.txt" />
+		<property name="signaturePrivateTesting" value="/.comercio/COMERCIO.TESTING.SIGNATURE.PRIVATE.txt" />	
+		<property name="signaturePublicTesting" value="/.comercio/COMERCIO.TESTING.SIGNATURE.PUBLIC.txt" />
+		<property name="cryptoPrivateTesting" value="/.comercio/COMERCIO.TESTING.CRYPTO.PRIVATE.txt" />
+	
+		<property name="vectorDeInicializacion" value="6e6375626f796e69" />
+		<property name="montoDeCobro" value="3000" />
+	</bean>
+
+	<bean id="webexpressionHandler"
+		class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+		
+		
+<!-- 	<bean class="org.springframework.web.servlet.view.XmlViewResolver"> -->
+<!--         <property name="location" value="/WEB-INF/spring/jasper-view.xml"/> -->
+<!--         <property name="order" value="0"/> -->
+<!--    	 </bean>  -->
+</beans>

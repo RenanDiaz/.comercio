@@ -1,0 +1,7 @@
+24/5/2014 2:53:50	backoffice  = BackOffice('backOffice');
+24/5/2014 3:1:46	shimano  =   backoffice.nuevoDistribuidor('Shimano' ,3/10/2014,'rdiaz+shimano@etechnologiesgroup.com','123','/Repo/Imagenes/BackOffice/41e7ed3a-0e27-45c0-b974-d15f9e729778-shimano.png',false);
+24/1/2015 11:56:10	backOffice.nuevoUsuarioDelDistribuidor(shimano, 'rdiaz+shimano@etechnologiesgroup.com');
+12/5/2015 9:21:35 backoffice.establecerMontoDeCobroPorNimbusFacebook(USD50.00);
+17/6/2015 12:14:55 servicioNimbusFacebook1  = backoffice.nuevoServicioDeNimbusFacebook('Servicio Nimbus Facebook',USD50.00);
+17/6/2015 12:14:55 backoffice.asignarServicio(servicioNimbusFacebook1 ).alDistribuidor(Shimano );
+3/8/2015 11:45:9	shimano.asociarDistribuidorAPaginaDeFB('913317242063707');

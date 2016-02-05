@@ -1,0 +1,4 @@
+28/08/2013 11:38:49 shimano = Distribuidor('Shimano', 2014,"rdiaz+shimano@etechnologiesgroup.com", '(507)1234-1234', '123','/Repo/Imagenes/BackOffice/41e7ed3a-0e27-45c0-b974-d15f9e729778-shimano.png',PA,USD);
+29/8/2014 14:41:14	usuario1  = shimano.nuevoSuperUsuario('Shimano','123','rdiaz+shimano@etechnologiesgroup.com');
+28/08/2013 11:38:49 bodegaPrincipal = shimano.nuevaBodega('Bodega principal','&Eacute;sta es la bodega principal').establecerComoBodegaPrincipal();
+16/10/2014 0:19:38	catalogoGeneral = shimano.nuevoCatalogo('Cat&aacute;logo general', 'imagen');

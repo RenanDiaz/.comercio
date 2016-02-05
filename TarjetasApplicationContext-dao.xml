@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<!-- Conexion con la base de datos -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/tarjetas" />
+		<property name="username" value="root" />
+		<property name="password" value="" />
+	</bean>
+
+	<!-- Hibernate 4 SessionFactory Bean definition --><!-- esto es para iniciar el hibernate (permite tener anotaciones que permiten 
+		mapear una codigo a una tabla, hace las validaciones a nivel de los objetos) -->
+	<bean id="hibernate4AnnotatedSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.ts.spring.model.UsuarioComercio</value>
+				<value>com.ts.spring.model.Person</value>
+				<value>com.ts.spring.model.Transaccion</value>
+				<value>com.ts.spring.model.Comercio</value>
+				<value>com.ts.spring.model.ClienteDeComercio</value>
+				<value>com.ts.spring.model.Lote</value>
+				<value>com.ts.spring.model.UsuarioCliente</value>
+				<value>com.ts.spring.model.Tarjeta</value>
+				<value>com.ts.spring.model.CobrosRecurrentes</value>
+				<value>com.ts.spring.model.CobroRecurrente</value>
+				<value>com.ts.spring.model.EstadosDeLaTransaccion</value>
+				<value>com.ts.spring.model.Moneda</value>
+				<value>com.ts.spring.model.DetalleDeLaCompra</value>
+			</list>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>orm/Usuario.hbm.xml</value>
+				<value>orm/RolUsuario.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<context:component-scan base-package="com.ts.spring" />
+	
+	<!-- Configuracion que se utilizará dentro de la linea 83(razón por la cual apunta a ese id: id="transactionManager") -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<!--El id me dice a que clase apuntar, es la clase que se comunica con las tablas -->
+	<bean id="personDAO" class="com.ts.spring.dao.PersonDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="personService" class="com.ts.spring.service.PersonServiceImpl">
+		<property name="personDAO" ref="personDAO" />
+	</bean>
+	
+	<!--El id me dice a que clase apuntar, es la clase que se comunica con las tablas, en este caso tenemos la configuracion de Transaccion -->
+	<bean id="transaccionDAO" class="com.ts.spring.dao.TransaccionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="transaccionService" class="com.ts.spring.service.TransaccionServiceImpl">
+		<property name="transaccionDAO" ref="transaccionDAO" />
+		<property name="comercioDAO" ref="comercioDAO" />
+		<property name="clienteDeComercioDAO" ref="clienteDeComercioDAO" />
+		<property name="lotesDAO" ref="lotesDAO" />
+		<property name="usuarioDAO" ref="usuarioDAO" />
+		<property name="usuarioComercioDAO" ref="usuarioComercioDAO" />
+		<property name="usuarioClienteDAO" ref="usuarioClienteDAO" />
+		<property name="estadosDeLaTransaccionDAO" ref="estadosDeLaTransaccionDAO" />
+	</bean>
+	
+	<bean id="tarjetaService" class="com.ts.spring.service.TarjetaServiceImpl">
+		<property name="tarjetaDAO" ref="tarjetaDAO" />
+	</bean>
+	
+	<bean id="tarjetaDAO" class="com.ts.spring.dao.TarjetaDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="registroService" class="com.ts.spring.service.RegistroServiceImpl">
+		<property name="usuarioDAO" ref="usuarioDAO" />
+	</bean>
+	
+	<!--El id me dice a que clase apuntar, es la clase que se comunica con las tablas, en este caso tenemos la configuracion de Transaccion -->
+	<bean id="clienteDeComercioDAO" class="com.ts.spring.dao.ClienteDeComercioDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="clienteDeComercioService" class="com.ts.spring.service.ClienteDeComercioServiceImpl">
+		<property name="clienteDeComercioDAO" ref="clienteDeComercioDAO" />
+	</bean>
+
+	<bean id="comercioDAO" class="com.ts.spring.dao.ComercioDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="comercioService" class="com.ts.spring.service.ComercioServiceImpl">
+		<property name="comercioDAO" ref="comercioDAO" />
+		<property name="usuarioDAO" ref="usuarioDAO" />
+		<property name="usuarioComercioDAO" ref="usuarioComercioDAO" />
+	</bean>
+
+	<bean id="lotesDAO" class="com.ts.spring.dao.LotesDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="lotesService" class="com.ts.spring.service.LotesServiceImpl">
+		<property name="lotesDAO" ref="lotesDAO" />
+		<property name="transaccionDAO" ref="transaccionDAO" />
+	</bean>
+	
+	<bean id="cobrosRecurrentesDAO" class="com.ts.spring.dao.CobrosRecurrentesDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="cobrosRecurrentesService" class="com.ts.spring.service.CobrosRecurrentesServiceImpl">
+		<property name="cobrosRecurrentesDAO" ref="cobrosRecurrentesDAO" />
+	</bean>
+	<bean id="cobroRecurrenteDAO" class="com.ts.spring.dao.CobroRecurrenteDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="cobroRecurrenteService" class="com.ts.spring.service.CobroRecurrenteServiceImpl">
+		<property name="cobroRecurrenteDAO" ref="cobroRecurrenteDAO" />
+	</bean>
+	
+	<bean id="estadosDeLaTransaccionDAO" class="com.ts.spring.dao.EstadosDeLaTransaccionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="estadosDeLaTransaccionService" class="com.ts.spring.service.EstadosDeLaTransaccionServiceImpl">
+		<property name="estadosDeLaTransaccionDAO" ref="estadosDeLaTransaccionDAO" />
+	</bean>
+	
+	<bean id="usuarioClienteDAO" class="com.ts.spring.dao.UsuarioClienteDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="usuarioClienteService" class="com.ts.spring.service.UsuarioClienteServiceImpl">
+		<property name="usuarioClienteDAO" ref="usuarioClienteDAO" />
+	</bean>
+	
+	<bean id="monedaDAO" class="com.ts.spring.dao.MonedaDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="monedaService" class="com.ts.spring.service.MonedaServiceImpl">
+		<property name="monedaDAO" ref="monedaDAO" />
+	</bean>
+	
+	<bean id="usuarioComercioDAO" class="com.ts.spring.dao.UsuarioComercioDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="usuarioDAO" class="com.ts.spring.dao.UsuarioDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="detallesDeUsuarioService" class="com.ts.spring.service.DetallesDeUsuarioService">
+		<property name="usuarioDAO" ref="usuarioDAO" />
+	</bean>
+	
+	<aop:config>
+		<aop:pointcut expression="execution(* com.ts.spring.service.*Service.*(..))" id="userServicePointCut"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="userServicePointCut"/>
+	</aop:config>
+</beans>

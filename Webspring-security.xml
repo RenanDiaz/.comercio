@@ -1,0 +1,92 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+          
+	<http auto-config="true">
+		<!-- Url de App con permisos especiales -->
+		<intercept-url pattern="/Proveedores/**" access="ROLE_PEDIDOS_EMPLEADO" />
+		<intercept-url pattern="/*/MiPerfil/**" access="ROLE_PEDIDOS_EMPLEADO" />
+		<intercept-url pattern="/*/Consultar/**" access="ROLE_PEDIDOS_EMPLEADO" />
+		<intercept-url pattern="/*/ExistenciasDelProducto/**" access="ROLE_PEDIDOS_EMPLEADO" />
+		<intercept-url pattern="/*/Cuentas/**" access="ROLE_PEDIDOS_ADMINISTRADOR" />
+		<intercept-url pattern="/*/comercio/**" access="ROLE_PEDIDOS_ADMINISTRADOR" />
+		<intercept-url pattern="/*/CuentasPorPagar/**" access="ROLE_PEDIDOS_ADMINISTRADOR" />
+		<intercept-url pattern="/*/Pedidos/**" access="ROLE_PEDIDOS_ADMINISTRADOR" />
+		<!-- Url de panel con permisos especiales -->
+		<intercept-url pattern="/*/Contactos/**" access="ROLE_ADMINISTRADOR" />
+		<intercept-url pattern="/*/Cuentas/**" access="ROLE_AUXILIAR_CONTABLE" />
+		<intercept-url pattern="/*/Catalogos/**" access="ROLE_SUPERUSUARIO" />
+		<intercept-url pattern="/*/Reportes/**" access="ROLE_AUXILIAR_CONTABLE" />
+		<intercept-url pattern="/*/Configuraciones/**" access="ROLE_ADMINISTRADOR" />
+		<intercept-url pattern="/*/Suscripcion/**" access="ROLE_SUSCRIPCION" />
+		<intercept-url pattern="/*/Articulos/**" access="ROLE_EMPLEADO_CON_INVENTARIO" />
+		<intercept-url pattern="/*/Inventario/**" access="ROLE_EMPLEADO_CON_INVENTARIO" />
+		<intercept-url pattern="/*/Movimientos/**" access="ROLE_INVENTARISTA" />
+		<intercept-url pattern="/*/Proveedor/**" access="ROLE_INVENTARISTA" />
+		<intercept-url pattern="/*/Transportista/**" access="ROLE_INVENTARISTA" />
+		<intercept-url pattern="/*/Perfil/**" access="ROLE_EMPLEADO" />
+		<!-- Url de panel y pedidos con permisos especiales -->
+		<intercept-url pattern="/*/CargarDetallesDeDistribuidor/**" access="ROLE_EMPLEADO, ROLE_PEDIDOS_EMPLEADO" />
+		<intercept-url pattern="/*/Pedidos/**" access="ROLE_PEDIDOS_EMPLEADO, ROLE_BODEGUERO" />
+		<!-- Url login y recursos -->
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/pedidos/loginPage"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/loginPage"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/pedidos/pedidos/loginPage"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/resources/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/resources/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/logout"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/UI/403"/>
+		
+		<!-- Urls de Nimbus Retail -->
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/carrito/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/Obtener/Detalle/Del/Carrito/"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/productos"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/nimbus.js"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/Buscador/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/busqueda/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/Paginacion/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/producto/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/producto/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/visita/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/pagarEnEfectivo"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/pagarConDeposito/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/paypal/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/paypaltrue/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/paypalfalse/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/pagarEnSinpeMovil/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/Pago/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/pagarConTarjeta/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/Subir/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/pagarConTransferencia/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/widget/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/hacerPedido/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/correo/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/CorreoAlClienteDeFacebook/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/Imagenes/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/miTienda/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/fb/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="**/TarjetaDeCredito/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/VPOS/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/pedido/**"/>
+
+		<intercept-url access="IS_AUTHENTICATED_FULLY" pattern="/**"/>
+		<form-login login-processing-url="/login" login-page="/loginPage"
+				username-parameter="username" password-parameter="password"
+				authentication-success-handler-ref="authenticationSuccessHandler"
+				authentication-failure-url="/loginPage?auth=fail"
+				always-use-default-target="false"/>
+		<logout logout-url="/logout" logout-success-url="/loginPage" />
+		<access-denied-handler error-page="/UI/403" />
+	</http>
+	
+	<beans:bean id="proveedorDeAutenticacion" class="com.ts.configuracion.ProveedorDeAutenticacion" />
+	<beans:bean id="authenticationSuccessHandler" class="com.ts.configuracion.SimpleUrlAuthenticationSuccessHandler" />
+
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider ref="proveedorDeAutenticacion" />
+	</authentication-manager>
+
+</beans:beans>

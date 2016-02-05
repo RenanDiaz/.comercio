@@ -1,0 +1,36 @@
+10:04:23,849 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 08/10/2015 10:04:22 000.000.000.000 UNKNOWN 0x8F7BD7AF0F9F7D11101A561593D0A9B3 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< [{"filas":[{"Usuario":[{"Distribuidor":"shimano", "Correo":"rdiaz+shimano@etechnologiesgroup.com"}]}]}] 
+
+10:04:23,849 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 08/10/2015 10:04:22 000.000.000.000 UNKNOWN 0x8F7BD7AF0F9F7D11101A561593D0A9B3 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< [{"filas":[{"Usuario":[{"Distribuidor":"shimano", "Correo":"rdiaz+shimano@etechnologiesgroup.com"}]}]}] 
+
+10:04:25,199 DEBUG SuscripcionController:36 - Validando subscripción de shimano
+10:04:25,199 DEBUG SuscripcionController:36 - Validando subscripción de shimano
+10:04:25,213 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 08/10/2015 10:04:25 000.000.000.000 UNKNOWN 0xB682F1D059CDB91FC564FD34BB788D79 PANEL show shimano.distribuidorDetalleDeSuscripcion();  
+<< [{"filas":[{"Estado":"ACTIVO", "Dias Transcurridos":"370", "Periodo De Prueba":"true"}]}] 
+
+10:04:25,213 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 08/10/2015 10:04:25 000.000.000.000 UNKNOWN 0xB682F1D059CDB91FC564FD34BB788D79 PANEL show shimano.distribuidorDetalleDeSuscripcion();  
+<< [{"filas":[{"Estado":"ACTIVO", "Dias Transcurridos":"370", "Periodo De Prueba":"true"}]}] 
+
+14:40:57,480 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 08/10/2015 14:40:57 000.000.000.000 UNKNOWN 0x8EC9680B681FF7C9B413BE76F5FE4096 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< [{"filas":[{"Usuario":[{"Distribuidor":"shimano", "Correo":"rdiaz+shimano@etechnologiesgroup.com"}]}]}] 
+
+14:40:57,480 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 08/10/2015 14:40:57 000.000.000.000 UNKNOWN 0x8EC9680B681FF7C9B413BE76F5FE4096 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< [{"filas":[{"Usuario":[{"Distribuidor":"shimano", "Correo":"rdiaz+shimano@etechnologiesgroup.com"}]}]}] 
+
+14:40:58,634 DEBUG SuscripcionController:36 - Validando subscripción de shimano
+14:40:58,634 DEBUG SuscripcionController:36 - Validando subscripción de shimano
+14:40:58,647 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 08/10/2015 14:40:58 000.000.000.000 UNKNOWN 0xB2999C06B3B5F39919A69DEB4D0BD370 PANEL show shimano.distribuidorDetalleDeSuscripcion();  
+<< [{"filas":[{"Estado":"ACTIVO", "Dias Transcurridos":"370", "Periodo De Prueba":"true"}]}] 
+
+14:40:58,647 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 08/10/2015 14:40:58 000.000.000.000 UNKNOWN 0xB2999C06B3B5F39919A69DEB4D0BD370 PANEL show shimano.distribuidorDetalleDeSuscripcion();  
+<< [{"filas":[{"Estado":"ACTIVO", "Dias Transcurridos":"370", "Periodo De Prueba":"true"}]}] 
+

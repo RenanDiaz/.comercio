@@ -1,0 +1,84 @@
+[DEBUG] 2016-02-02 14:34:55,718 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:34:55,718 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:34:55,718 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:34:55,724 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:34:55,724 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:34:55,724 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:34:55,750 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:34:55, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:34:55,750 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:34:55, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:40:06,640 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:40:06,640 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:40:06,640 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:40:06,670 com.ts.controller.ControllerWeb iniciarApiParaSession - Api ya existia para _backoffice
+[DEBUG] 2016-02-02 14:40:06,670 com.ts.controller.ControllerWeb iniciarApiParaSession - Api ya existia para _backoffice
+[DEBUG] 2016-02-02 14:40:06,670 com.ts.controller.ControllerWeb iniciarApiParaSession - Api ya existia para _backoffice
+[DEBUG] 2016-02-02 14:40:06,671 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:40:06, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:40:06,671 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:40:06, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:40:08,119 com.ts.configuracion.Api2Manager executeQuery - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto por REST la consulta 
+>> 02/02/2016 14:40:06 000.000.000.000 UNKNOWN0 0x000 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. 
+
+[DEBUG] 2016-02-02 14:40:08,119 com.ts.configuracion.Api2Manager executeQuery - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto por REST la consulta 
+>> 02/02/2016 14:40:06 000.000.000.000 UNKNOWN0 0x000 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. 
+
+[DEBUG] 2016-02-02 14:40:12,622 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:40:12,622 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:40:12,622 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:40:12,623 com.ts.controller.ControllerWeb iniciarApiParaSession - Api ya existia para _backoffice
+[DEBUG] 2016-02-02 14:40:12,623 com.ts.controller.ControllerWeb iniciarApiParaSession - Api ya existia para _backoffice
+[DEBUG] 2016-02-02 14:40:12,623 com.ts.controller.ControllerWeb iniciarApiParaSession - Api ya existia para _backoffice
+[DEBUG] 2016-02-02 14:40:12,624 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:40:12, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:40:12,624 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:40:12, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:40:13,648 com.ts.configuracion.Api2Manager executeQuery - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto por REST la consulta 
+>> 02/02/2016 14:40:12 000.000.000.000 UNKNOWN0 0x000 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. 
+
+[DEBUG] 2016-02-02 14:40:13,648 com.ts.configuracion.Api2Manager executeQuery - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto por REST la consulta 
+>> 02/02/2016 14:40:12 000.000.000.000 UNKNOWN0 0x000 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. 
+
+[DEBUG] 2016-02-02 14:42:07,700 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:42:07,700 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:42:07,700 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:42:07,705 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:42:07,705 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:42:07,705 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:42:07,723 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:42:07, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:42:07,723 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:42:07, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:42:10,346 com.ts.configuracion.Api2Manager executeQuery - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto por REST la consulta 
+>> 02/02/2016 14:42:07 000.000.000.000 UNKNOWN0 0x000 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. 
+
+[DEBUG] 2016-02-02 14:42:10,346 com.ts.configuracion.Api2Manager executeQuery - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto por REST la consulta 
+>> 02/02/2016 14:42:07 000.000.000.000 UNKNOWN0 0x000 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. 
+
+[DEBUG] 2016-02-02 14:44:16,702 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:44:16,702 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:44:16,702 com.ts.controller.ControllerWeb iniciarApiParaSession - Se pide un api para _backoffice
+[DEBUG] 2016-02-02 14:44:16,706 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:44:16,706 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:44:16,706 com.ts.controller.ControllerWeb iniciarApiParaSession - Se registro un nuevo api para _backoffice
+[DEBUG] 2016-02-02 14:44:16,723 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:44:16, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:44:16,723 com.ts.configuracion.Api2Manager sustituirParametros - Para el comando se utlizan los siguientes valores  HoraActual:02/02/2016 14:44:16, Ip:000.000.000.000, browser:UNKNOWN0, Usuario:0x000, Canal:PANEL, Comando:show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');
+[DEBUG] 2016-02-02 14:44:18,800 com.ts.configuracion.Api2Manager executeQuery - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto por REST la consulta 
+>> 02/02/2016 14:44:16 000.000.000.000 UNKNOWN0 0x000 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< com.ts.interprete.libraries.LanguageException: Se esperaba una fecha en el comando, por favor verificar formato. 
+
+[DEBUG] 2016-02-02 14:44:18,800 com.ts.configuracion.Api2Manager executeQuery - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto por REST la consulta 
+>> 02/02/2016 14:44:16 000.000.000.000 UNKNOWN0 0x000 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< com.ts.interprete.libraries.LanguageException: Se esperaba una fecha en el comando, por favor verificar formato. 
+

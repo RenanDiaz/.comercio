@@ -1,0 +1,12 @@
+24/5/2014 2:53:49	ciclotienda = Tienda('Ciclo Tienda', 2014, '(000)9999-9999', 'rdiaz+ciclotienda@etechnologiesgroup.com','Juan Jose Villegas','/Repo/Imagenes/BackOffice/12f9cb06-7b92-445f-b4e7-67c0c511ce71-ciclotienda.png');
+24/5/2014 2:53:49	usuario1 = ciclotienda.nuevoAdministrador('Ren&aacute;n D&iacute;az','RDiaz','123','rdiaz+ciclotienda@etechnologiesgroup.com');
+14/9/2015 17:53:27	shimano  = ciclotienda.nuevaSolicitudDeNegocio(14/9/2015,'','Shimano',2014);
+14/9/2015 17:53:47	ciclotienda.registrarProveedor(shimano );
+14/9/2015 17:53:47	carritoshimano  = ciclotienda.nuevoCarrito(shimano );
+25/9/2015 15:42:46	carritoshimano.agregarProducto('producto1','catalogoGeneral',4,25/9/2015 15:42:46);
+25/9/2015 15:43:6	ciclotienda.agregarDireccionDeEnvio('Mi casa');
+25/9/2015 16:43:17	carritoshimano.modificarCantidadDelProducto('producto1','catalogoGeneral',9);
+25/9/2015 16:43:48	pedido_shimano_2  = shimano.nuevoPedido('pedido_shimano_2','Mi casa',25/9/2015 16:43:48,usuario1 ).conDetalle('producto1','iPhone 6','iPhone 6 Space Gray 64 GB','/Repo/Imagenes/shimano/d365559c-b8a8-4ae2-b6b9-ebdeb406471d-iphone6-gray-select-2014_GEO_US.png',9,USD750.00);
+25/9/2015 16:43:48	carritoshimano.limpiarCarrito();
+29/9/2015 11:38:1	cuentaPorPagar_shimano_1  = ciclotienda.nuevaCuentaPorPagar(pedido_shimano_2 ,29/9/2015 11:38:1);
+29/9/2015 11:38:2	pago_shimano_1  = ciclotienda.nuevoPago(29/9/2015,shimano ,SIN_VERIFICAR ).conDetalle(cuentaPorPagar_shimano_1 ,USD6750.00);

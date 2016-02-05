@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- enabling annotation driven configuration / -->
+	<context:annotation-config />
+
+	<bean id="enviroment" class="com.ts.configuracion.Enviroment"
+		init-method="init">
+
+		<property name="claveMail" value="WeUs2kB6" />
+		<property name="direccionMail" value="no-reply-nimbus@ncubo.com" />
+		<property name="direccionMailDeBO" value="fmartinez@ncubo.com" />
+		<property name="stmpHost" value="smtp.gmail.com" />
+		<property name="stmpTlsEnabled" value="true" />
+		<property name="stmpPort" value="587" />
+		<property name="stmpAuth" value="true" />
+		<property name="fileNameRecord" value="HistorialBackOffice" />
+		<property name="dominio" value="http://localhost:8080" />
+		<property name="hostDeBackOffice" value="http://localhost:8080/BackOffice" />
+		<property name="hostDelDistribuidor" value="http://web.ncubo:8080" />
+		<property name="urlRepo" value="http://repo.ncubo:8080/Repo" />
+		<property name="hostDeLaTienda" value="http://app.ncubo:8080" />
+		<property name="periodoDeSuscripcion" value="1000" />
+		<property name="montoDeCobro" value="3000" />
+
+	</bean>
+
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/config/tiles-defs.xml</value>
+			</list>
+		</property>
+		<property name="tilesProperties">
+			<props>
+				<prop key="org.apache.tiles.evaluator.AttributeEvaluator">org.apache.tiles.evaluator.el.ELAttributeEvaluator
+				</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

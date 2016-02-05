@@ -1,0 +1,8 @@
+18:09:59,347 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 06/10/2015 18:09:57 000.000.000.000 UNKNOWN 0x6FE3410B56E2E81FDBA20D4F226640A0 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< [{"filas":[{"Usuario":[{"Distribuidor":"shimano", "Correo":"rdiaz+shimano@etechnologiesgroup.com"}]}]}] 
+
+18:09:59,347 DEBUG Api2Manager:59 - A http://logicaNegocios.ncubo:8080/LN/comercios/_backoffice se ejecuto la consulta 
+>> 06/10/2015 18:09:57 000.000.000.000 UNKNOWN 0x6FE3410B56E2E81FDBA20D4F226640A0 PANEL show backoffice.buscarUsuarioDeDistribuidorPorCorreo('rdiaz+shimano@etechnologiesgroup.com');  
+<< [{"filas":[{"Usuario":[{"Distribuidor":"shimano", "Correo":"rdiaz+shimano@etechnologiesgroup.com"}]}]}] 
+
