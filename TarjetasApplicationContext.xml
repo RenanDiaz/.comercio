@@ -62,6 +62,35 @@
 		<property name="vectorDeInicializacion" value="6e6375626f796e69" />
 		<property name="montoDeCobro" value="3000" />
 	</bean>
+	
+	<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
+	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
+		<property name="password" value="WeUs2kB6" />
+		<property name="mailTo"  >
+			<!-- 
+				Lista de correos que seran notificados cuando un error suceda
+				si <array> está vacio ningun correo será enviado
+			-->
+			<array>
+				<value>rdiaz@etechnologiesgroup.com</value>
+	    	</array>
+    	</property>
+    	<!-- Suject del correo que se enviará-->
+		<property name="subject" value="Error en Tarjetas Mola de Producción" />
+		<property name="body" value="" />
+		<property name="attachFiles" >
+			<!-- 
+				Lista de archivos para adjuntar en el correo,
+				Si el archivo pesa más de 5 megas no se adjunta.
+			-->
+			<array>
+				<value>/.comercio/logs/Tarjetas.log</value>
+	    	</array>
+		</property>
+	</bean>
 
 	<bean id="webexpressionHandler"
 		class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />

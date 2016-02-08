@@ -112,6 +112,14 @@
 		<property name="usuarioDAO" ref="usuarioDAO" />
 	</bean>
 	
+	<bean id="detalleDeLaCompraDAO" class="com.ts.spring.dao.DetalleDeLaCompraDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="detalleDeLaCompraService" class="com.ts.spring.service.DetalleDeLaCompraServiceImpl">
+		<property name="detalleDeLaCompraDAO" ref="detalleDeLaCompraDAO" />
+	</bean>
+	
 	<!--El id me dice a que clase apuntar, es la clase que se comunica con las tablas, en este caso tenemos la configuracion de Transaccion -->
 	<bean id="clienteDeComercioDAO" class="com.ts.spring.dao.ClienteDeComercioDAOImpl">
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
