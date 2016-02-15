@@ -7,9 +7,9 @@
           
 	<http auto-config="true">
 		<!-- Url de App con permisos especiales -->
-		<intercept-url pattern="/Proveedores/**" access="ROLE_PEDIDOS_EMPLEADO" />
+		<intercept-url pattern="/*/Proveedores/**" access="ROLE_PEDIDOS_EMPLEADO" />
 		<intercept-url pattern="/*/MiPerfil/**" access="ROLE_PEDIDOS_EMPLEADO" />
-		<intercept-url pattern="/*/Consultar/**" access="ROLE_PEDIDOS_EMPLEADO" />
+		<intercept-url pattern="/*/Consultar/**" access="ROLE_PEDIDOS_EMPLEADO, ROLE_ADMINISTRADOR, ROLE_PEDIDOS_ADMINISTRADOR" />
 		<intercept-url pattern="/*/ExistenciasDelProducto/**" access="ROLE_PEDIDOS_EMPLEADO" />
 		<intercept-url pattern="/*/Cuentas/**" access="ROLE_PEDIDOS_ADMINISTRADOR" />
 		<intercept-url pattern="/*/comercio/**" access="ROLE_PEDIDOS_ADMINISTRADOR" />
@@ -18,12 +18,12 @@
 		<!-- Url de panel con permisos especiales -->
 		<intercept-url pattern="/*/Contactos/**" access="ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/Cuentas/**" access="ROLE_AUXILIAR_CONTABLE" />
-		<intercept-url pattern="/*/Catalogos/**" access="ROLE_SUPERUSUARIO" />
-		<intercept-url pattern="/*/Reportes/**" access="ROLE_AUXILIAR_CONTABLE" />
+		<intercept-url pattern="/*/Reportes/**" access="ROLE_AUXILIAR_CONTABLE, ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/Configuraciones/**" access="ROLE_ADMINISTRADOR" />
+		<intercept-url pattern="/*/Configuraciones**" access="ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/Suscripcion/**" access="ROLE_SUSCRIPCION" />
-		<intercept-url pattern="/*/Articulos/**" access="ROLE_EMPLEADO_CON_INVENTARIO" />
-		<intercept-url pattern="/*/Inventario/**" access="ROLE_EMPLEADO_CON_INVENTARIO" />
+		<intercept-url pattern="/*/Articulos/**" access="ROLE_EMPLEADO_CON_INVENTARIO, ROLE_ADMINISTRADOR, ROLE_INVENTARISTA" />
+		<intercept-url pattern="/*/Inventario/**" access="ROLE_EMPLEADO_CON_INVENTARIO, ROLE_ADMINISTRADOR, ROLE_INVENTARISTA" />
 		<intercept-url pattern="/*/Movimientos/**" access="ROLE_INVENTARISTA" />
 		<intercept-url pattern="/*/Proveedor/**" access="ROLE_INVENTARISTA" />
 		<intercept-url pattern="/*/Transportista/**" access="ROLE_INVENTARISTA" />
@@ -31,7 +31,13 @@
 		<!-- Url de panel y pedidos con permisos especiales -->
 		<intercept-url pattern="/*/CargarDetallesDeDistribuidor/**" access="ROLE_EMPLEADO, ROLE_PEDIDOS_EMPLEADO" />
 		<intercept-url pattern="/*/Pedidos/**" access="ROLE_PEDIDOS_EMPLEADO, ROLE_BODEGUERO" />
+		<intercept-url pattern="/*/Catalogos/**" access="ROLE_PEDIDOS_EMPLEADO, ROLE_SUPERUSUARIO" />
 		<!-- Url login y recursos -->
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/Distribuidor/**" />
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/RecuperarContrasena/**" />
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/Pedidos/**" />
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/OlvidoContrasena/**" />
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/comercios/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/pedidos/loginPage"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/loginPage"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/pedidos/pedidos/loginPage"/>
@@ -39,9 +45,12 @@
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/resources/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/logout"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/UI/403"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/rest/**"/>
 		
 		<!-- Urls de Nimbus Retail -->
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/carrito/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/carrito/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/CantidadDeProducto/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/Obtener/Detalle/Del/Carrito/"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/productos"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/nimbus.js"/>
@@ -71,6 +80,7 @@
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="**/TarjetaDeCredito/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/VPOS/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/pedido/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/NuevoResize/**"/>
 
 		<intercept-url access="IS_AUTHENTICATED_FULLY" pattern="/**"/>
 		<form-login login-processing-url="/login" login-page="/loginPage"
