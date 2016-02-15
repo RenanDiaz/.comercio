@@ -1,0 +1,34 @@
+[2016-02-14 16:11:08,134][INFO ][node                     ] [Aleta Ogord] version[2.2.0], pid[21787], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-02-14 16:11:08,134][INFO ][node                     ] [Aleta Ogord] initializing ...
+[2016-02-14 16:11:09,403][INFO ][plugins                  ] [Aleta Ogord] modules [lang-expression, lang-groovy], plugins [], sites []
+[2016-02-14 16:11:09,566][INFO ][env                      ] [Aleta Ogord] using [1] data paths, mounts [[/ (/dev/disk0s2)]], net usable_space [489.7gb], net total_space [930.7gb], spins? [unknown], types [hfs]
+[2016-02-14 16:11:09,566][INFO ][env                      ] [Aleta Ogord] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-02-14 16:11:14,116][INFO ][node                     ] [Aleta Ogord] initialized
+[2016-02-14 16:11:14,116][INFO ][node                     ] [Aleta Ogord] starting ...
+[2016-02-14 16:11:14,371][INFO ][transport                ] [Aleta Ogord] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2016-02-14 16:11:14,396][INFO ][discovery                ] [Aleta Ogord] elasticsearch/dnTCJo36RO2nLC2sq1UGGQ
+[2016-02-14 16:11:17,475][INFO ][cluster.service          ] [Aleta Ogord] new_master {Aleta Ogord}{dnTCJo36RO2nLC2sq1UGGQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-02-14 16:11:17,512][INFO ][http                     ] [Aleta Ogord] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2016-02-14 16:11:17,512][INFO ][node                     ] [Aleta Ogord] started
+[2016-02-14 16:11:17,543][INFO ][gateway                  ] [Aleta Ogord] recovered [0] indices into cluster_state
+[2016-02-14 22:00:06,922][INFO ][node                     ] [Aleta Ogord] stopping ...
+[2016-02-14 22:00:07,181][INFO ][node                     ] [Aleta Ogord] stopped
+[2016-02-14 22:00:07,181][INFO ][node                     ] [Aleta Ogord] closing ...
+[2016-02-14 22:00:07,190][INFO ][node                     ] [Aleta Ogord] closed
+[2016-02-14 22:07:55,579][INFO ][node                     ] [Kohl Harder Boulder Man] version[2.2.0], pid[661], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-02-14 22:07:55,609][INFO ][node                     ] [Kohl Harder Boulder Man] initializing ...
+[2016-02-14 22:08:04,899][INFO ][plugins                  ] [Kohl Harder Boulder Man] modules [lang-expression, lang-groovy], plugins [], sites []
+[2016-02-14 22:08:05,463][INFO ][env                      ] [Kohl Harder Boulder Man] using [1] data paths, mounts [[/ (/dev/disk0s2)]], net usable_space [491.7gb], net total_space [930.7gb], spins? [unknown], types [hfs]
+[2016-02-14 22:08:05,463][INFO ][env                      ] [Kohl Harder Boulder Man] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-02-14 22:08:40,146][INFO ][node                     ] [Kohl Harder Boulder Man] initialized
+[2016-02-14 22:08:40,146][INFO ][node                     ] [Kohl Harder Boulder Man] starting ...
+[2016-02-14 22:08:40,997][INFO ][transport                ] [Kohl Harder Boulder Man] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2016-02-14 22:08:41,103][INFO ][discovery                ] [Kohl Harder Boulder Man] elasticsearch/b-T9kJ3tSBywGh4Plwy1pA
+[2016-02-14 22:08:44,182][INFO ][cluster.service          ] [Kohl Harder Boulder Man] new_master {Kohl Harder Boulder Man}{b-T9kJ3tSBywGh4Plwy1pA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-02-14 22:08:44,218][INFO ][http                     ] [Kohl Harder Boulder Man] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2016-02-14 22:08:44,218][INFO ][node                     ] [Kohl Harder Boulder Man] started
+[2016-02-14 22:08:44,452][INFO ][gateway                  ] [Kohl Harder Boulder Man] recovered [0] indices into cluster_state
+[2016-02-14 23:24:58,971][INFO ][node                     ] [Kohl Harder Boulder Man] stopping ...
+[2016-02-14 23:24:59,057][INFO ][node                     ] [Kohl Harder Boulder Man] stopped
+[2016-02-14 23:24:59,057][INFO ][node                     ] [Kohl Harder Boulder Man] closing ...
+[2016-02-14 23:24:59,065][INFO ][node                     ] [Kohl Harder Boulder Man] closed
