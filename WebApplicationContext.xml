@@ -33,8 +33,12 @@
 		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
 		<property name="urlTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
-		<property name="urlBambuMuro" value="http://bambu.muro:8080/"/>
-		
+		<property name="correoDelAdministradorDeNimbus" value="usuarionimbus@gmail.com"/>
+		<property name="urlJasperServer" value="https://site.nimbus.ncubo.com/jasperserver/flow.html?_flowId=viewReportFlow" />
+		<property name="produccion" value="true" />
+		<property name="distribuidorNcubo" value="ncubo" />
+		<property name="modoMembresia" value="true" />
+		<property name="modoNimbusPedidos" value="true" />
 		<!-- Retail properties -->
 		<property name="fbCredentials" ref="fbPruebasCredenciales" />
 		<property name="paypalAppID" value="APP-6H400807N5091300N"/>
@@ -59,7 +63,26 @@
 		<property name="conectorConLN" ref="restConector"/>
 		<!-- FIN Configuración en de conexción con Lógica de Negocios -->
 		
+		<!-- propiedades Backoffice  -->
+		<property name="montoDeCobro" value="1000" />
+		<property name="periodoDeSuscripcion" value="1000" />
+		<property name="bambuConector" ref="bambuConector" />
+		
 	</bean>
+	
+	<!-- Bambu -->
+	<bean id="bambuConector" class="com.ts.configuracion.ConectorBambu">
+		<property name="urlBambuMuro" value="http://bambu.muro:8080"/>
+		<property name="urlBambuMembresia" value="http://bambu.membresia:9075/ServicioMembresias.svc/Pagos?correoDelCliente=%s"/>
+		<property name="urlBambuMembresiaFactura" value="http://bambu.membresia:9075/ServicioMembresias.svc/Factura"/>
+		<property name="urlBambuMembresiaCobro" value="http://bambu.membresia:58366/ServicioMembresias.svc/Cobro?correoDelCliente=%s"/>
+		<property name="urlBambuMembresiaCliente" value="http://bambu.membresia:58366/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
+		<property name="urlBambuContacto" value="http://bambu.membresia:8086/InformacionTribu.svc/v2/candidato"/>
+		<property name="urlBambuClientes" value="http://bambu.membresia:9075/ServicioMembresias.svc/cliente"/>
+		<property name="urlBambuCrearOportunidad" value="http://bambu.membresia:8086/InformacionTribu.svc/v2/oportunidad"/>
+		<property name="urlBambuConvertirOportunidad" value="http://bambu.membresia:8086/InformacionTribu.svc/v2/oportunidad/cotizacion/aprobado"/>
+	</bean>
+	<!--  FIN Bambu -->
 	
 	<!--  Facebook-->
 	<bean id="fbProduccionCredenciales" class="com.ts.configuracion.FaceboookCredentials">
@@ -76,16 +99,7 @@
 	<bean id="restConector" class="com.ts.configuracion.Api2ManagerREST">
 		<constructor-arg value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 	</bean>
-	<!--<bean id="queueConector" class="com.ts.configuracion.Api2ManagerQueue">
-		<constructor-arg ref="queueDriver" />
-		<constructor-arg ref="com.ts.libraries.Canal.Tipo.PANEL" />
-	</bean>
-	<bean id="queueDriver" class="com.ts.procesadores.BusListenerSetting">
-		<property name="zookeeperUrl" value="localhost:2181" />
-		<property name="groupId" value="Malinche" />
-		<property name="brokerList" value="localhost:9092" />
-	</bean>
-	 FIN Beans para la conexión con LN-->
+	<!--FIN Beans para la conexión con LN-->
 
 	
 		<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
