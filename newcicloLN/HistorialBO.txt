@@ -1,0 +1,18 @@
+24/05/2014 02:53:50 backoffice = BackOffice('backOffice');
+24/05/2014 02:53:50 backoffice.establecerRangoDeRentaDelImpuestoSobreLasPersonasJuridicas(CRC47451000.00, CRC95477000.00, 2015);
+24/05/2014 02:53:50 backoffice.establecerMontoDeCobroPorNimbusFacebook(CRC50000.00);
+17/06/2015 11:44:38 newbikesTemporal = backoffice.nuevoDistribuidorTemporal('newBikes', 2015, 'jullyad@hotmail.com', '(506)86558166', '123456', '/Repo/Imagenes/BackOffice/e468e575-6f1e-414f-a15d-71e043f07bc4-logo.png', 'CR', 'CRC', false);
+17/06/2015 11:44:38 backoffice.nuevaVerificacionDeRegistro(newbikesTemporal, '(506)86558166', 67579, SMS);
+17/06/2015 11:45:49 newbikes = backoffice.nuevoDistribuidor('newBikes', 17/6/2015, 'jullyad@hotmail.com', '(506)86558166', '/Imagenes/BackOffice/e468e575-6f1e-414f-a15d-71e043f07bc4-logo.png', false);
+17/06/2015 11:45:49 backoffice.nuevoUsuarioDelDistribuidor(newbikes, 'jullyad@hotmail.com');
+17/06/2015 11:45:49 backoffice.verificarCodigo(newbikesTemporal);
+17/06/2015 11:45:49 backoffice.registrarNuevoControlDePrimerIngreso(newbikes, '29510d85-e2ea-4072-a722-b2d9d307afff');
+17/06/2015 11:46:01 newbikesTemporal = Null;
+26/08/2015 10:16:10 newbikes.asociarDistribuidorAPaginaDeFb('882572928474394');
+26/08/2015 10:20:08 servicioNimbusFacebook1 = backoffice.nuevoServicioDeNimbusFacebook('Servicio Nimbus Facebook', CRC50000.00);
+26/08/2015 10:20:08 backoffice.asignarServicio(servicioNimbusFacebook1).alDistribuidor(newbikes);
+28/09/2015 10:30:07 backoffice.desHabilitarServicioDeNimbusFacebook(newbikes);
+28/09/2015 10:30:50 newbikes.asociarDistribuidorAPaginaDeFb('882572928474394');
+28/09/2015 10:31:42 backoffice.habilitarServicioDeNimbusFacebook(newbikes);
+18/12/2014 11:23:04 newciclo = backoffice.nuevaTienda('newciclo', '(506)8888-8888', 'dmonestel@testingsoft.com', './resources/imagenes/empty-pic.png', 'Contacto');
+18/12/2014 11:23:04 backoffice.nuevoUsuarioDeTienda(newciclo, 'dmonestel@testingsoft.com');

@@ -21,7 +21,7 @@
 		<property name="modoDemo" value="false" />
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
-		<property name="dominio" value="http://192.168.1.84:8080/" />
+		<property name="dominio" value="http://192.168.1.67:8080/" />
 		<property name="hostDelDistribuidor" value="http://web.ncubo:8080" />
 		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />	
 		<property name="fbAppId" value="913317242063707" />
@@ -29,7 +29,7 @@
 		<property name="urlLN" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 		<property name="portSearchEngine" value="9200" />
 		<property name="clusterNameSearchEngine" value="distribuidoranimbustech" />
-		<property name="dominioRepo" value="http://192.168.1.84:8080/Repo" />
+		<property name="dominioRepo" value="http://192.168.1.67:8080/Repo" />
 		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
 		<property name="urlTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>

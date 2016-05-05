@@ -1,0 +1,2 @@
+08/07/2015 09:39:43 newciclo = Tienda('newciclo', 2015, '(506)86558166', 'dmonestel@testingsoft.com', 'Dennis Monestel', './resources/imagenes/empty-pic.png');
+08/07/2015 09:39:43 usuario1 = newciclo.nuevoAdministrador('Administrador', 'admin', 'estrella', 'dmonestel@testingsoft.com');

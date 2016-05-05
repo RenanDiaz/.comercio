@@ -14,10 +14,6 @@
 	<!-- enabling annotation driven configuration / -->
 	<context:annotation-config />
 	
-	<mvc:interceptors>
-		<bean class="com.ncubo.email.Interceptor" />
-	</mvc:interceptors>
-	
 	<bean id="enviroment" class="com.ncubo.configuracion.Enviroment" init-method="init">
 		<property name="SEConector" ref="SEConector" />
 		<!--  Comentar esto para el ambiente de los devs <property name="queueDriverSettings" ref="queueDriver" />-->
