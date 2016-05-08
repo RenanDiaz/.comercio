@@ -2,3 +2,4 @@
 28/08/2013 11:38:49 bodegaPrincipal = newbikes.nuevaBodega('Bodega principal', '&Eacute;sta es la bodega principal').establecerComoBodegaPrincipal();
 29/08/2013 11:38:49 usuario1 = newbikes.nuevoSuperUsuario('Nimbus', '123456', 'jullyad@hotmail.com');
 28/12/2013 11:38:49 catalogoGeneral = newbikes.nuevoCatalogo('Cat&aacute;logo general', 'Imagen');
+05/05/2016 11:06:46 newbikes.editarImagenCorporativa('/Imagenes/newbikes/79b21ea177a14abe84196a30cb5901ecnimbuspedidoslogo.png');
