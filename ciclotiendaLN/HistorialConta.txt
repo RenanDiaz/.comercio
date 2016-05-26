@@ -1,2 +1,2 @@
-24/5/2014 2:53:49	ciclotienda = Tienda('Ciclo Tienda', 2014, '(000)9999-9999', 'rdiaz+ciclotienda@etechnologiesgroup.com','Juan Jose Villegas','/Repo/Imagenes/BackOffice/12f9cb06-7b92-445f-b4e7-67c0c511ce71-ciclotienda.png');
+24/5/2014 2:53:49	ciclotienda = Tienda('Ciclo Tienda', 2014, '(000)9999-9999', 'rdiaz+ciclotienda@etechnologiesgroup.com','Juan Jose Villegas','/Imagenes/BackOffice/12f9cb06-7b92-445f-b4e7-67c0c511ce71-ciclotienda.png');
 24/5/2014 2:53:49	usuario1 = ciclotienda.nuevoAdministrador('Ren&aacute;n D&iacute;az','RDiaz','123','rdiaz+ciclotienda@etechnologiesgroup.com');
