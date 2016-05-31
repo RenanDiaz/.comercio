@@ -41,7 +41,7 @@
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
 		<property name="correoDelAdministradorDeNimbus" value="usuarionimbus@gmail.com"/>
 		<property name="urlJasperServer" value="https://site.nimbus.ncubo.com/jasperserver/flow.html?_flowId=viewReportFlow" />
-		<property name="produccion" value="true" />
+		<property name="produccion" value="false" />
 		<property name="distribuidorNcubo" value="ncubo" />
 		<property name="modoMembresia" value="true" />
 		<property name="modoNimbusPedidos" value="true" />

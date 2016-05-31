@@ -60,5 +60,6 @@
 
 	<bean id="SEConector" class="com.ncubo.searchEngine.SEConector">
 		<constructor-arg value="http://searchEngine.ncubo:9200/"/>
+		<constructor-arg ref="emailErrorConfiguration" />
 	</bean>
 </beans>
