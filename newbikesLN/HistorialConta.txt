@@ -1,4 +1,4 @@
-24/05/2014 02:53:49 newbikes = Distribuidor('Nimbus', 2015, 'jullyad@hotmail.com', '(506)86558166', '123456', '/Imagenes/BackOffice/e468e575-6f1e-414f-a15d-71e043f07bc4-logo.png', CR, CRC);
+24/05/2014 02:53:49 newbikes = Distribuidor('New Bikes', 2015, 'jullyad@hotmail.com', '(506)86558166', '123456', '/Imagenes/BackOffice/e468e575-6f1e-414f-a15d-71e043f07bc4-logo.png', CR, CRC);
 28/08/2013 11:38:49 bodegaPrincipal = newbikes.nuevaBodega('Bodega principal', '&Eacute;sta es la bodega principal').establecerComoBodegaPrincipal();
 29/08/2013 11:38:49 usuario1 = newbikes.nuevoSuperUsuario('Nimbus', '123456', 'jullyad@hotmail.com');
 28/12/2013 11:38:49 catalogoGeneral = newbikes.nuevoCatalogo('Cat&aacute;logo general', 'Imagen');

@@ -1,9 +1,9 @@
 24/05/2014 02:53:50 backoffice = BackOffice('backOffice');
 24/05/2014 02:53:50 backoffice.establecerRangoDeRentaDelImpuestoSobreLasPersonasJuridicas(CRC47451000.00, CRC95477000.00, 2015);
 24/05/2014 02:53:50 backoffice.establecerMontoDeCobroPorNimbusFacebook(CRC50000.00);
-17/06/2015 11:44:38 newbikesTemporal = backoffice.nuevoDistribuidorTemporal('newBikes', 2015, 'jullyad@hotmail.com', '(506)86558166', '123456', '/Imagenes/BackOffice/e468e575-6f1e-414f-a15d-71e043f07bc4-logo.png', 'CR', 'CRC', false);
+17/06/2015 11:44:38 newbikesTemporal = backoffice.nuevoDistribuidorTemporal('New Bikes', 2015, 'jullyad@hotmail.com', '(506)86558166', '123456', '/Imagenes/newbikes/79b21ea177a14abe84196a30cb5901ecnimbuspedidoslogo.png', 'CR', 'CRC', false);
 17/06/2015 11:44:38 backoffice.nuevaVerificacionDeRegistro(newbikesTemporal, '(506)86558166', 67579, SMS);
-17/06/2015 11:45:49 newbikes = backoffice.nuevoDistribuidor('newBikes', 17/6/2015, 'jullyad@hotmail.com', '(506)86558166', '/Imagenes/BackOffice/e468e575-6f1e-414f-a15d-71e043f07bc4-logo.png', false);
+17/06/2015 11:45:49 newbikes = backoffice.nuevoDistribuidor('New Bikes', 17/6/2015, 'jullyad@hotmail.com', '(506)86558166', '/Imagenes/newbikes/79b21ea177a14abe84196a30cb5901ecnimbuspedidoslogo.png', false);
 17/06/2015 11:45:49 backoffice.nuevoUsuarioDelDistribuidor(newbikes, 'jullyad@hotmail.com');
 17/06/2015 11:45:49 backoffice.verificarCodigo(newbikesTemporal);
 17/06/2015 11:45:49 backoffice.registrarNuevoControlDePrimerIngreso(newbikes, '29510d85-e2ea-4072-a722-b2d9d307afff');

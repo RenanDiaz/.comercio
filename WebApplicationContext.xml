@@ -21,21 +21,21 @@
 		<property name="modoDemo" value="false" />
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
-		
+
 		<!-- <property name="dominio" value="http://192.168.1.67:8080/" /> -->
-		<property name="dominio" value="http://localhost:8080/" />
-		
+		<property name="dominio" value="http://10.0.1.8:8080/" />
+
 		<property name="hostDelDistribuidor" value="http://web.ncubo:8080" />
-		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />	
+		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
 		<property name="fbAppId" value="913317242063707" />
 		<property name="urlSearchEngine" value="http://searchEngine.ncubo:9200/" />
 		<property name="urlLN" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 		<property name="portSearchEngine" value="9200" />
 		<property name="clusterNameSearchEngine" value="distribuidoranimbustech" />
-		
+
 		<!-- <property name="dominioRepo" value="http://192.168.1.67:8080/Repo" /> -->
-		<property name="dominioRepo" value="http://localhost:8080/Repo" />
-		
+		<property name="dominioRepo" value="http://10.0.1.8:8080/Repo" />
+
 		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
 		<property name="urlTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
@@ -43,7 +43,7 @@
 		<property name="urlJasperServer" value="https://site.nimbus.ncubo.com/jasperserver/flow.html?_flowId=viewReportFlow" />
 		<property name="produccion" value="false" />
 		<property name="distribuidorNcubo" value="ncubo" />
-		<property name="modoMembresia" value="true" />
+		<property name="modoMembresia" value="false" />
 		<property name="modoNimbusPedidos" value="true" />
 		<!-- Retail properties -->
 		<property name="fbCredentials" ref="fbPruebasCredenciales" />
@@ -60,22 +60,22 @@
 		<!-- Pedidos properties -->
 		<property name="urlTarjeta" value="http://181.193.69.242:8282" />
   		<property name="idDeComercio" value="Nimbus12345" />
-		<!--  
+		<!--
 		Configuración en de conexción con Lógica de Negocios
 		Se puede usar:
-		1. restConector para devs 
+		1. restConector para devs
 		2. queueConector para qa y produccion
-		-->		
+		-->
 		<property name="conectorConLN" ref="restConector"/>
 		<!-- FIN Configuración en de conexción con Lógica de Negocios -->
-		
+
 		<!-- propiedades Backoffice  -->
 		<property name="montoDeCobro" value="1000" />
 		<property name="periodoDeSuscripcion" value="1000" />
 		<property name="bambuConector" ref="bambuConector" />
-		
+
 	</bean>
-	
+
 	<!-- Bambu -->
 	<bean id="bambuConector" class="com.ts.configuracion.ConectorBambu">
 		<property name="urlBambuMuro" value="http://bambu.muro:8080"/>
@@ -89,7 +89,7 @@
 		<property name="urlBambuConvertirOportunidad" value="http://bambu.membresia:8086/InformacionTribu.svc/v2/oportunidad/cotizacion/aprobado"/>
 	</bean>
 	<!--  FIN Bambu -->
-	
+
 	<!--  Facebook-->
 	<bean id="fbProduccionCredenciales" class="com.ts.configuracion.FaceboookCredentials">
 		<property name="appId" value="913317242063707" />
@@ -107,7 +107,7 @@
 	</bean>
 	<!--FIN Beans para la conexión con LN-->
 
-	
+
 		<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
@@ -115,7 +115,7 @@
 		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
 		<property name="password" value="WeUs2kB6" />
 		<property name="mailTo"  >
-			<!-- 
+			<!--
 				Lista de correos que seran notificados cuando un error suceda
 				si <array> está vacio ningun correo será enviado
 			-->
@@ -127,7 +127,7 @@
 		<property name="subject" value="Error en la UI de Producción " />
 		<property name="body" value="" />
 		<property name="attachFiles" >
-			<!-- 
+			<!--
 				Lista de archivos para adjuntar en el correo,
 				Si el archivo pesa más de 5 megas no se adjunta.
 			-->
@@ -136,5 +136,5 @@
 	    	</array>
 		</property>
 	</bean>
-	
+
 </beans>

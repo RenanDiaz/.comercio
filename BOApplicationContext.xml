@@ -18,10 +18,10 @@
 		<property name="stmpTlsEnabled" value="true" />
 		<property name="stmpPort" value="587" />
 		<property name="stmpAuth" value="true" />
-		
+
 		<!-- <property name="dominio" value="http://192.168.1.67:8080" /> -->
-		<property name="dominio" value="http://localhost:8080" />
-		
+		<property name="dominio" value="http://10.0.1.8:8080" />
+
 		<property name="hostDeBackOffice" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 		<property name="compania" value="_backoffice" />
 		<property name="hostDelDistribuidor" value="http://web.ncubo:8080" />
@@ -32,7 +32,7 @@
 		<property name="urlMembresia" value="http://bambu.membresia:8086/InformacionTribu.svc/cliente"/>
 		<property name="urlDeTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas"/>
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
-		
+
 		<!-- FIN Conexión con otros servers	 -->
 		<!-- Configuracion de tarjetas de crédito -->
 		<property name="periodoDeSuscripcion" value="1000" />
@@ -45,49 +45,49 @@
 		<property name="codigoComercioTesting" value="7480" />
 		<property name="codigoMall" value="1" />
 		<property name="codigoTerminal" value="00000000" />
-		<property name="produccion" value="true" />
+		<property name="produccion" value="false" />
 		<property name="urlPruebasTarjetas" value="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" />
 		<property name="urlProduccionTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
-		
-		<property name="alignetCryptoPublicTesting" value="/moscoa/.comercio/ALIGNET.TESTING.NOPHP.CRYPTO.PUBLIC.txt" />
-		<property name="alignetSignaturePublicTesting" value="/moscoa/.comercio/ALIGNET.TESTING.NOPHP.SIGNATURE.PUBLIC.txt" />
-		<property name="cryptoPublicTesting" value="/moscoa/.comercio/COMERCIO.TESTING.CRYPTO.PUBLIC.txt" />
-		<property name="signaturePrivateTesting" value="/moscoa/.comercio/COMERCIO.TESTING.SIGNATURE.PRIVATE.txt" />	
-		<property name="signaturePublicTesting" value="/moscoa/.comercio/COMERCIO.TESTING.SIGNATURE.PUBLIC.txt" />
-		<property name="cryptoPrivateTesting" value="/moscoa/.comercio/COMERCIO.TESTING.CRYPTO.PRIVATE.txt" />
-		
-		
-		
-		<property name="alignetSignaturePublicProduccion" value="/moscoa/.comercio/ALIGNET.PRODUCCION.NOPHP.SIGNATURE.PUBLIC.txt" />	
-		<property name="alignetCryptoPublicProduccion" value="/moscoa/.comercio/ALIGNET.PRODUCCION.NOPHP.CRYPTO.PUBLIC.txt" />
-		<property name="cryptoPublicProduccion" value="/moscoa/.comercio/COMERCIO.PRODUCCION.CRYPTO.PUBLIC.txt" />
-		<property name="signaturePrivateProduccion" value="/moscoa/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PRIVATE.txt" />	
-		<property name="signaturePublicProduccion" value="/moscoa/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PUBLIC.txt" />
-		<property name="cryptoPrivateProduccion" value="/moscoa/.comercio/COMERCIO.PRODUCCION.CRYPTO.PRIVATE.txt" />
-		
+
+		<property name="alignetCryptoPublicTesting" value="/.comercio/ALIGNET.TESTING.NOPHP.CRYPTO.PUBLIC.txt" />
+		<property name="alignetSignaturePublicTesting" value="/.comercio/ALIGNET.TESTING.NOPHP.SIGNATURE.PUBLIC.txt" />
+		<property name="cryptoPublicTesting" value="/.comercio/COMERCIO.TESTING.CRYPTO.PUBLIC.txt" />
+		<property name="signaturePrivateTesting" value="/.comercio/COMERCIO.TESTING.SIGNATURE.PRIVATE.txt" />
+		<property name="signaturePublicTesting" value="/.comercio/COMERCIO.TESTING.SIGNATURE.PUBLIC.txt" />
+		<property name="cryptoPrivateTesting" value="/.comercio/COMERCIO.TESTING.CRYPTO.PRIVATE.txt" />
+
+
+
+		<property name="alignetSignaturePublicProduccion" value="/.comercio/ALIGNET.PRODUCCION.NOPHP.SIGNATURE.PUBLIC.txt" />
+		<property name="alignetCryptoPublicProduccion" value="/.comercio/ALIGNET.PRODUCCION.NOPHP.CRYPTO.PUBLIC.txt" />
+		<property name="cryptoPublicProduccion" value="/.comercio/COMERCIO.PRODUCCION.CRYPTO.PUBLIC.txt" />
+		<property name="signaturePrivateProduccion" value="/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PRIVATE.txt" />
+		<property name="signaturePublicProduccion" value="/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PUBLIC.txt" />
+		<property name="cryptoPrivateProduccion" value="/.comercio/COMERCIO.PRODUCCION.CRYPTO.PRIVATE.txt" />
+
 		<!-- FIN Configuracion de tarjetas de crédito  -->
-		<!--  
+		<!--
 		Configuración en de conexción con Lógica de Negocios
 		Se puede usar:
-		1. restConector para devs 
+		1. restConector para devs
 		2. queueConector para qa y produccion
 		-->
 		<property name="vectorDeInicializacion" value="6e6375626f796e69" />
 		<property name="conectorConLN" ref="restConector" />
 		<!-- FIN Configuración en de conexción con Lógica de Negocios -->
-		
-		<property name="zookeeper" value="busServicios.ncubo:2181" /><!-- Url del zookeeper para crear las cola, si se comenta esta propiedad u brokerList las colas no seran creadas. -->
-		<property name="brokerList" value="busServicios.ncubo:9092" /><!-- Url del kafka para crear las cola, si se comenta esta propiedad u zookepeer las colas no seran creadas. -->
+
+		<!-- <property name="zookeeper" value="busServicios.ncubo:2181" /> Url del zookeeper para crear las cola, si se comenta esta propiedad u brokerList las colas no seran creadas. -->
+		<!-- <property name="brokerList" value="busServicios.ncubo:9092" /> Url del kafka para crear las cola, si se comenta esta propiedad u zookepeer las colas no seran creadas. -->
 		<property name="replicacionColas" value="1" />
-		
+
 	</bean>
-	
+
 	<!-- INICIO Beans para la conexión con LN-->
 	<bean id="restConector" class="com.ts.configuracion.Api2ManagerREST">
-		<constructor-arg value="http://localhost:8080/LN/comercios/" />
+		<constructor-arg value="http://10.0.1.8:8080/LN/comercios/" />
 	</bean>
 	<!-- FIN Beans para la conexión con LN-->
-	
+
 	<bean id="tilesConfigurer"
 		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
 		<property name="definitions">
@@ -102,14 +102,14 @@
 			</props>
 		</property>
 	</bean>
-	
+
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
 		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
 		<property name="password" value="WeUs2kB6" />
 		<property name="mailTo"  >
-			<!-- 
+			<!--
 				Lista de correos que seran notificados cuando un error suceda
 				si <array> está vacio ningun correo será enviado
 			-->
@@ -120,7 +120,7 @@
 		<property name="subject" value="Error en la UI de Producción " />
 		<property name="body" value="" />
 		<property name="attachFiles" >
-			<!-- 
+			<!--
 				Lista de archivos para adjuntar en el correo,
 				Si el archivo pesa más de 5 megas no se adjunta.
 			-->
@@ -129,5 +129,5 @@
 	    	</array>
 		</property>
 	</bean>
-	
+
 </beans>

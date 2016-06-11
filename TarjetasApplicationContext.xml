@@ -19,17 +19,17 @@
 
 	<bean id="enviroment" class="com.ts.configuracion.Enviroment" init-method="">
 	
-		<property name="wsParaValidarTarjeta" value="http://localhost:8080/Tarjetas/validarTarjetas" />
+		<property name="wsParaValidarTarjeta" value="http://10.0.1.8:8080/Tarjetas/validarTarjetas" />
 		<property name="claveMail" value="abc$1234" />
 	  	<property name="direccionMail" value="tools@testingsoft.com" />
 	  	<property name="stmpHost" value="smtp.gmail.com" />
 	  	<property name="stmpTlsEnabled" value="true" />
 	  	<property name="stmpPort" value="587" />
 	  	<property name="stmpAuth" value="true" />
-		<property name="urlBackOffice" value="http://localhost:8080/BackOffice" />
-		<property name="urlTarjeta" value="http://localhost:8080" />
+		<property name="urlBackOffice" value="http://10.0.1.8:8080/BackOffice" />
+		<property name="urlTarjeta" value="http://10.0.1.8:8080" />
 		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
-		<property name="jasperServer" value="http://localhost:8282/jasperserver/flow.html?_flowId=viewReportFlow" />
+		<property name="jasperServer" value="http://10.0.1.8:8282/jasperserver/flow.html?_flowId=viewReportFlow" />
 		
 		<property name="codigoEconomia" value="840" />
 		<property name="commerceMallId" value="1" />
