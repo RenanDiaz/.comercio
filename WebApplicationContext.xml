@@ -18,12 +18,10 @@
 		<property name="urlRepo" value="http://repo.ncubo:8080/Repo" />
 		<property name="urlBackOffice" value="http://backoffice.ncubo:8080/BackOffice/"/>
 		<property name="hostDeLaTienda" value="http://app.ncubo:8080" />
-		<property name="modoDemo" value="false" />
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
 
-		<!-- <property name="dominio" value="http://192.168.1.67:8080/" /> -->
-		<property name="dominio" value="http://10.0.1.8:8080/" />
+		<property name="dominio" value="http://192.168.1.28:8080/" />
 
 		<property name="hostDelDistribuidor" value="http://web.ncubo:8080" />
 		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
@@ -33,8 +31,7 @@
 		<property name="portSearchEngine" value="9200" />
 		<property name="clusterNameSearchEngine" value="distribuidoranimbustech" />
 
-		<!-- <property name="dominioRepo" value="http://192.168.1.67:8080/Repo" /> -->
-		<property name="dominioRepo" value="http://10.0.1.8:8080/Repo" />
+		<property name="dominioRepo" value="http://192.168.1.28:8080/Repo" />
 
 		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
 		<property name="urlTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas" />
@@ -82,11 +79,16 @@
 		<property name="urlBambuMembresia" value="http://bambu.membresia:9075/ServicioMembresias.svc/Pagos?correoDelCliente=%s"/>
 		<property name="urlBambuMembresiaFactura" value="http://bambu.membresia:9075/ServicioMembresias.svc/Factura"/>
 		<property name="urlBambuMembresiaCobro" value="http://bambu.membresia:58366/ServicioMembresias.svc/Cobro?correoDelCliente=%s"/>
-		<property name="urlBambuMembresiaCliente" value="http://bambu.membresia:58366/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
-		<property name="urlBambuContacto" value="http://bambu.membresia:8086/InformacionTribu.svc/v2/candidato"/>
 		<property name="urlBambuClientes" value="http://bambu.membresia:9075/ServicioMembresias.svc/cliente"/>
-		<property name="urlBambuCrearOportunidad" value="http://bambu.membresia:8086/InformacionTribu.svc/v2/oportunidad"/>
-		<property name="urlBambuConvertirOportunidad" value="http://bambu.membresia:8086/InformacionTribu.svc/v2/oportunidad/cotizacion/aprobado"/>
+		<property name="urlBambuCrearOportunidad" value="/InformacionTribu.svc/v2/oportunidad"/>
+		<property name="urlBambuMembresiaCliente" value="/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
+		<property name="urlBambuContacto" value="/InformacionTribu.svc/v2/candidato"/>
+		<property name="urlBambuConvertirOportunidad" value="/InformacionTribu.svc/v2/oportunidad/cotizacion/aprobado"/>
+		<property name="urlBambuCrearTarea" value="/InformacionTribu.svc/tarea/desplazamiento"/>
+		<property name="urlBambuParaAutenticarUsuario" value="/InformacionTribu.svc/usuario/servicio"/>
+		<property name="urlBambuNotificacionesDeCorreos" value="http://bambu.membresia:9090/Notificaciones.svc/correo"/>
+		<property name="bambuPalabraSecreate" value="7f9facc418f74439c5e9709832;0ab8a5:OCOdN5Wl,q8SLIQz8i|8agmu¬s13Q7ZXyno/"/>
+		<property name="urlBambuMembresiaPlanActual" value="http://bambu.membresia:9075/ServicioMembresias.svc/Membresia?correoDelCliente=%s"/>
 	</bean>
 	<!--  FIN Bambu -->
 
