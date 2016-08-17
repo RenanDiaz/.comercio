@@ -19,8 +19,7 @@
 		<property name="stmpPort" value="587" />
 		<property name="stmpAuth" value="true" />
 
-		<!-- <property name="dominio" value="http://192.168.1.67:8080" /> -->
-		<property name="dominio" value="http://10.0.1.8:8080" />
+		<property name="dominio" value="http://192.168.0.101:8080" />
 
 		<property name="hostDeBackOffice" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 		<property name="compania" value="_backoffice" />
@@ -32,6 +31,8 @@
 		<property name="urlMembresia" value="http://bambu.membresia:8086/InformacionTribu.svc/cliente"/>
 		<property name="urlDeTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas"/>
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
+		<property name="distribuidorNcubo" value="ncubo" />
+		<property name="bambuConector" ref="bambuConector" />
 
 		<!-- FIN Conexión con otros servers	 -->
 		<!-- Configuracion de tarjetas de crédito -->
@@ -84,9 +85,14 @@
 
 	<!-- INICIO Beans para la conexión con LN-->
 	<bean id="restConector" class="com.ts.configuracion.Api2ManagerREST">
-		<constructor-arg value="http://10.0.1.8:8080/LN/comercios/" />
+		<constructor-arg value="http://192.168.0.101:8080/LN/comercios/" />
 	</bean>
 	<!-- FIN Beans para la conexión con LN-->
+
+  	<!-- Bambu -->
+  	<bean id="bambuConector" class="com.ts.configuracion.ConectorBambu">
+  		<property name="rutaDeConexionRetail" value="http://10.1.2.56:9191"/>
+  	</bean>
 
 	<bean id="tilesConfigurer"
 		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">

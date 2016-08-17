@@ -15,13 +15,13 @@
 		<property name="stmpTlsEnabled" value="true" />
 		<property name="stmpPort" value="587" />
 		<property name="stmpAuth" value="true" />
-		<property name="urlRepo" value="http://repo.ncubo:8080/Repo" />
+		<property name="urlDeRepoDesdeInternet" value="http://192.168.0.101:8080/Repo" />
 		<property name="urlBackOffice" value="http://backoffice.ncubo:8080/BackOffice/"/>
 		<property name="hostDeLaTienda" value="http://app.ncubo:8080" />
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
 
-		<property name="dominio" value="http://192.168.1.28:8080/" />
+		<property name="dominio" value="http://192.168.0.101:8080/" />
 
 		<property name="hostDelDistribuidor" value="http://web.ncubo:8080" />
 		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
@@ -30,9 +30,6 @@
 		<property name="urlLN" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 		<property name="portSearchEngine" value="9200" />
 		<property name="clusterNameSearchEngine" value="distribuidoranimbustech" />
-
-		<property name="dominioRepo" value="http://192.168.1.28:8080/Repo" />
-
 		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
 		<property name="urlTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
