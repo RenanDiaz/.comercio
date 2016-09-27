@@ -12,7 +12,6 @@
 		<intercept-url pattern="/*/Consultar/**" access="ROLE_PEDIDOS_EMPLEADO, ROLE_ADMINISTRADOR, ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/ExistenciasDelProducto/**" access="ROLE_PEDIDOS_EMPLEADO,ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/Cuentas/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
-		<intercept-url pattern="/*/pedidos/Cuentas/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/comercio/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/CuentasPorPagar/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/Pedidos/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
@@ -80,8 +79,10 @@
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/hacerPedido/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/correo/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/CorreoAlClienteDeFacebook/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/CorreoAlClienteRetail/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/Imagenes/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/miTienda/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/mitienda/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/fb/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="**/TarjetaDeCredito/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/VPOS/**"/>
@@ -92,7 +93,7 @@
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/ruta/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/somoslente/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/asociacion/**"/>
-		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/vista/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/vista/**"/>
 
 
 		<intercept-url access="IS_AUTHENTICATED_FULLY" pattern="/**"/>

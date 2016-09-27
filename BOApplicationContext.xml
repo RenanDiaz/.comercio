@@ -32,7 +32,6 @@
 		<property name="urlDeTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas"/>
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
 		<property name="distribuidorNcubo" value="ncubo" />
-		<property name="bambuConector" ref="bambuConector" />
 
 		<!-- FIN Conexión con otros servers	 -->
 		<!-- Configuracion de tarjetas de crédito -->
@@ -88,11 +87,6 @@
 		<constructor-arg value="http://192.168.0.101:8080/LN/comercios/" />
 	</bean>
 	<!-- FIN Beans para la conexión con LN-->
-
-  	<!-- Bambu -->
-  	<bean id="bambuConector" class="com.ts.configuracion.ConectorBambu">
-  		<property name="rutaDeConexionRetail" value="http://10.1.2.56:9191"/>
-  	</bean>
 
 	<bean id="tilesConfigurer"
 		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
