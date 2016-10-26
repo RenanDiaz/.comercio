@@ -20,10 +20,8 @@
 		<property name="hostDeLaTienda" value="http://app.ncubo:8080" />
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
-
 		<property name="dominio" value="http://192.168.0.101:8080/" />
-
-		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
+		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />	
 		<property name="fbAppId" value="913317242063707" />
 		<property name="urlSearchEngine" value="http://searchEngine.ncubo:9200/" />
 		<property name="urlLN" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
@@ -32,12 +30,12 @@
 		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
 		<property name="urlTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
-		<property name="correoDelAdministradorDeNimbus" value="usuarionimbus@gmail.com"/>
+		<property name="correoDelAdministradorDeNimbus" value="Usuario_14"/>
 		<property name="urlJasperServer" value="https://site.nimbus.ncubo.com/jasperserver/flow.html?_flowId=viewReportFlow" />
 		<property name="produccion" value="false" />
 		<property name="distribuidorNcubo" value="ncubo" />
 		<property name="modoMembresia" value="false" />
-		<property name="modoNimbusPedidos" value="true" />
+		<property name="modoNimbusPedidos" value="false" />
 		<!-- Retail properties -->
 		<property name="fbCredentials" ref="fbPruebasCredenciales" />
 		<property name="paypalAppID" value="APP-6H400807N5091300N"/>
@@ -51,14 +49,14 @@
 		<property name="hostTarjeta" value="http://tarjeta.ncubo:8080/Tarjetas" />
 		<property name="urlWebs" value="http://web.ncubo:8080/"/>
 		<!-- Pedidos properties -->
-		<property name="urlTarjeta" value="http://181.193.69.242:8282" />
-  		<property name="idDeComercio" value="Nimbus12345" />
-		<!--
+		<property name="urlTarjeta" value="http://tarjeta.ncubo:8080" />
+		<property name="idDeComercio" value="Nimbus12345" />
+		<!--  
 		Configuración en de conexción con Lógica de Negocios
 		Se puede usar:
-		1. restConector para devs
+		1. restConector para devs 
 		2. queueConector para qa y produccion
-		-->
+		-->		
 		<property name="conectorConLN" ref="restConector"/>
 		<!-- FIN Configuración en de conexción con Lógica de Negocios -->
 
@@ -74,17 +72,18 @@
 		<property name="urlBambuMuro" value="http://bambu.muro:8080"/>
 		<property name="urlBambuMembresia" value="http://bambu.membresia:9075/ServicioMembresias.svc/Pagos?correoDelCliente=%s"/>
 		<property name="urlBambuMembresiaFactura" value="http://bambu.membresia:9075/ServicioMembresias.svc/Factura"/>
-		<property name="urlBambuMembresiaCobro" value="http://bambu.membresia:58366/ServicioMembresias.svc/Cobro?correoDelCliente=%s"/>
+		<property name="urlBambuMembresiaCobro" value="http://bambu.membresia:9075/ServicioMembresias.svc/Cobro?correoDelCliente=%s"/>
 		<property name="urlBambuClientes" value="http://bambu.membresia:9075/ServicioMembresias.svc/cliente"/>
 		<property name="urlBambuCrearOportunidad" value="/InformacionTribu.svc/v2/oportunidad"/>
-		<property name="urlBambuMembresiaCliente" value="/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
 		<property name="urlBambuContacto" value="/InformacionTribu.svc/v2/candidato"/>
 		<property name="urlBambuConvertirOportunidad" value="/InformacionTribu.svc/v2/oportunidad/cotizacion/aprobado"/>
 		<property name="urlBambuCrearTarea" value="/InformacionTribu.svc/tarea/desplazamiento"/>
 		<property name="urlBambuParaAutenticarUsuario" value="/InformacionTribu.svc/usuario/servicio"/>
 		<property name="urlBambuNotificacionesDeCorreos" value="http://bambu.membresia:9393/Notificaciones.svc/v2/correo"/>
-		<property name="bambuPalabraSecreate" value="7f9facc418f74439c5e9709832;0ab8a5:OCOdN5Wl,q8SLIQz8i|8agmu¬s13Q7ZXyno/"/>
 		<property name="urlBambuMembresiaPlanActual" value="http://bambu.membresia:9075/ServicioMembresias.svc/Membresia?correoDelCliente=%s"/>
+		<property name="urlBambuMembresiaCliente" value="http://bambu.membresia:8086/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
+		<property name="bambuPalabraSecreate" value="7f9facc418f74439c5e9709832;0ab8a5:OCOdN5Wl,q8SLIQz8i|8agmu¬s13Q7ZXyno/"/>
+		<property name="urlBambuCrearCotizacion" value="/v2/cotizacion"/>
 	</bean>
 	<!--  FIN Bambu -->
 
@@ -94,44 +93,54 @@
 		<property name="secretkey" value="1d47a4155a1c3be739a63b0d9fc01ef4" />
 	</bean>
 	<bean id="fbPruebasCredenciales" class="com.ts.configuracion.FaceboookCredentials">
-		<property name="appId" value="1599077467008419" />
-		<property name="secretkey" value="9a95138eb075339d5ebcc4f180327cb8" />
+		<property name="appId" value="913317242063707" />
+		<property name="secretkey" value="1d47a4155a1c3be739a63b0d9fc01ef4" />
 	</bean>
 	<!--  FIN Facebook-->
 
 	<!-- INICIO Beans para la conexión con LN-->
-	<bean id="restConector" class="com.ts.configuracion.Api2ManagerREST">
-		<constructor-arg value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
+	<!-- PROD
+		<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
+			<property name="zookeeperUrl" value="192.168.10.26:2190" />
+		</bean>
+		QA
+		<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
+			<property name="zookeeperUrl" value="10.1.1.90:2190" />
+		</bean>
+
+		DEVS -->
+	<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
+		<property name="logicaNegocios" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 	</bean>
 	<!--FIN Beans para la conexión con LN-->
 
 
-		<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
+	<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
 		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
 		<property name="password" value="WeUs2kB6" />
 		<property name="mailTo"  >
-			<!--
+			<!-- 
 				Lista de correos que seran notificados cuando un error suceda
 				si <array> está vacio ningun correo será enviado
 			-->
 			<array>
 				<value>rdiaz@etechnologiesgroup.com</value>
-	    	</array>
-    	</property>
-    	<!-- Suject del correo que se enviará-->
-		<property name="subject" value="Error en la UI de Producción " />
+			</array>
+		</property>
+		<!-- Suject del correo que se enviará-->
+		<property name="subject" value="Error en la UI de Dev" />
 		<property name="body" value="" />
 		<property name="attachFiles" >
-			<!--
+			<!-- 
 				Lista de archivos para adjuntar en el correo,
 				Si el archivo pesa más de 5 megas no se adjunta.
 			-->
 			<array>
 				<value>/.comercio/logs/Web.log</value>
-	    	</array>
+			</array>
 		</property>
 	</bean>
 
