@@ -18,19 +18,19 @@
 	</bean>
 
 	<bean id="enviroment" class="com.ts.configuracion.Enviroment" init-method="">
-	
-		<property name="wsParaValidarTarjeta" value="http://192.168.0.101:8080/Tarjetas/validarTarjetas" />
+
+		<property name="wsParaValidarTarjeta" value="http://10.0.1.3:8080/Tarjetas/validarTarjetas" />
 		<property name="claveMail" value="abc$1234" />
 	  	<property name="direccionMail" value="tools@testingsoft.com" />
 	  	<property name="stmpHost" value="smtp.gmail.com" />
 	  	<property name="stmpTlsEnabled" value="true" />
 	  	<property name="stmpPort" value="587" />
 	  	<property name="stmpAuth" value="true" />
-		<property name="urlBackOffice" value="http://192.168.0.101:8080/BackOffice" />
-		<property name="urlTarjeta" value="http://192.168.0.101:8080" />
-		<property name="hostBackOfficeTarjeta" value="http://backofficetarjeta.ncubo:8080/BackOfficeMola" />
-		<property name="jasperServer" value="http://192.168.0.101:8282/jasperserver/flow.html?_flowId=viewReportFlow" />
-		
+		<property name="urlBackOffice" value="http://10.0.1.3:8080/BackOffice" />
+		<property name="urlTarjeta" value="http://10.0.1.3:8080" />
+		<property name="hostBackOfficeTarjeta" value="http://10.0.1.3:8080/BackOfficeMola" />
+		<property name="jasperServer" value="http://10.0.1.3:8282/jasperserver/flow.html?_flowId=viewReportFlow" />
+
 		<property name="codigoEconomia" value="840" />
 		<property name="commerceMallId" value="1" />
 		<property name="codigoAdquirenteTesting" value="99" />
@@ -42,27 +42,27 @@
 		<property name="produccion" value="false" />
 		<property name="urlPruebasTarjetas" value="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" />
 		<property name="urlProduccionTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
-		
-		<property name="alignetSignaturePublicProduccion" value="/.comercio/ALIGNET.PRODUCCION.NOPHP.SIGNATURE.PUBLIC.txt" />	
+
+		<property name="alignetSignaturePublicProduccion" value="/.comercio/ALIGNET.PRODUCCION.NOPHP.SIGNATURE.PUBLIC.txt" />
 		<property name="alignetCryptoPublicProduccion" value="/.comercio/ALIGNET.PRODUCCION.NOPHP.CRYPTO.PUBLIC.txt" />
-		
+
 		<property name="cryptoPublicProduccion" value="/.comercio/COMERCIO.PRODUCCION.CRYPTO.PUBLIC.txt" />
-		<property name="signaturePrivateProduccion" value="/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PRIVATE.txt" />	
+		<property name="signaturePrivateProduccion" value="/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PRIVATE.txt" />
 		<property name="signaturePublicProduccion" value="/.comercio/COMERCIO.PRODUCCION.SIGNATURE.PUBLIC.txt" />
 		<property name="cryptoPrivateProduccion" value="/.comercio/COMERCIO.PRODUCCION.CRYPTO.PRIVATE.txt" />
-		
+
 		<property name="alignetCryptoPublicTesting" value="/.comercio/ALIGNET.TESTING.NOPHP.CRYPTO.PUBLIC.txt" />
 		<property name="alignetSignaturePublicTesting" value="/.comercio/ALIGNET.TESTING.NOPHP.SIGNATURE.PUBLIC.txt" />
-		
+
 		<property name="cryptoPublicTesting" value="/.comercio/COMERCIO.TESTING.CRYPTO.PUBLIC.txt" />
-		<property name="signaturePrivateTesting" value="/.comercio/COMERCIO.TESTING.SIGNATURE.PRIVATE.txt" />	
+		<property name="signaturePrivateTesting" value="/.comercio/COMERCIO.TESTING.SIGNATURE.PRIVATE.txt" />
 		<property name="signaturePublicTesting" value="/.comercio/COMERCIO.TESTING.SIGNATURE.PUBLIC.txt" />
 		<property name="cryptoPrivateTesting" value="/.comercio/COMERCIO.TESTING.CRYPTO.PRIVATE.txt" />
-	
+
 		<property name="vectorDeInicializacion" value="6e6375626f796e69" />
 		<property name="montoDeCobro" value="3000" />
 	</bean>
-	
+
 	<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
@@ -70,7 +70,7 @@
 		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
 		<property name="password" value="WeUs2kB6" />
 		<property name="mailTo"  >
-			<!-- 
+			<!--
 				Lista de correos que seran notificados cuando un error suceda
 				si <array> está vacio ningun correo será enviado
 			-->
@@ -82,7 +82,7 @@
 		<property name="subject" value="Error en Tarjetas Mola de Producción" />
 		<property name="body" value="" />
 		<property name="attachFiles" >
-			<!-- 
+			<!--
 				Lista de archivos para adjuntar en el correo,
 				Si el archivo pesa más de 5 megas no se adjunta.
 			-->
@@ -94,8 +94,8 @@
 
 	<bean id="webexpressionHandler"
 		class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
-		
-		
+
+
 <!-- 	<bean class="org.springframework.web.servlet.view.XmlViewResolver"> -->
 <!--         <property name="location" value="/WEB-INF/spring/jasper-view.xml"/> -->
 <!--         <property name="order" value="0"/> -->
