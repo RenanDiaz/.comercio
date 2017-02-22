@@ -13,8 +13,8 @@
 	
 	<bean id="enviroment" class="com.ncubo.configuracion.Enviroment" init-method="init">
 		<property name="SEConector" ref="SEConector" />
-		<!--  Comentar esto para el ambiente de los devs <property name="queueDriverSettings" ref="queueDriver" />-->
-		<property name="connectionMySQL" value="jdbc:mysql://logicaNegocios.ncubo:3306/nimbus" />
+		<!--  <property name="queueDriverSettings" ref="queueDriver" />-->
+		<property name="connectionMySQL" value="jdbc:mysql://bd.ncubo:3306/nimbus" />
 		<property name="usuarioMySQL" value="logwriter" />
 		<property name="passwordMySQL" value="logwriter" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
@@ -24,8 +24,8 @@
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
-		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
-		<property name="password" value="WeUs2kB6" />
+		<property name="mailFrom" value="ncuboqa@gmail.com" />
+		<property name="password" value="nimbus123" />
 		<property name="mailTo"  >
 			<!-- 
 				Lista de correos que seran notificados cuando un error suceda

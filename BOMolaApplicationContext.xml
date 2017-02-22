@@ -18,7 +18,7 @@
 	</bean>
 
 	<bean id="enviroment" class="com.ts.configuracion.Enviroment" init-method="">
-		<property name="wsParaValidarTarjeta" value="http://192.168.0.101:8080/backoffice/validarTarjetas" />
+		<property name="wsParaValidarTarjeta" value="http://backofficetarjeta.ncubo:8080/backoffice/validarTarjetas" />
 	</bean>
 
 	<bean id="webexpressionHandler"

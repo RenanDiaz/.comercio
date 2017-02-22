@@ -16,9 +16,9 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://192.168.0.101:3306/backoffice" />
-		<property name="username" value="root" />
-		<property name="password" value="" />
+		<property name="url" value="jdbc:mysql://bd.ncubo:3306/backofficetarjetas" />
+		<property name="username" value="logwriter" />
+		<property name="password" value="logwriter" />
 	</bean>
 
 	<bean id="hibernate4AnnotatedSessionFactory"

@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<bean id="enviroment" class="com.ts.configuracion.Enviroment" init-method="init">
-		<property name="claveMail" value="WeUs2kB6" />
+		<property name="claveMail" value="WeUs2kB61" />
 		<property name="direccionMail" value="no-reply-nimbus@ncubo.com" />
 		<property name="stmpHost" value="smtp.gmail.com" />
 		<property name="stmpTlsEnabled" value="true" />
@@ -20,7 +20,7 @@
 		<property name="hostDeLaTienda" value="http://app.ncubo:8080" />
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
-		<property name="dominio" value="http://192.168.0.101:8080/" />
+		<property name="dominio" value="https://site.nimbus.ncubo.com/" />
 		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
 		<property name="fbAppId" value="913317242063707" />
 		<property name="urlSearchEngine" value="http://searchEngine.ncubo:9200/" />
@@ -50,7 +50,7 @@
 		<property name="urlWebs" value="http://web.ncubo:8080/"/>
 		<!-- Pedidos properties -->
 		<property name="urlTarjeta" value="http://tarjeta.ncubo:8080" />
-		<property name="idDeComercio" value="Nimbus12345" />
+  		<property name="idDeComercio" value="Nimbus12345" />
 		<!--
 		Configuración en de conexción con Lógica de Negocios
 		Se puede usar:
@@ -84,7 +84,10 @@
 		<property name="urlBambuMembresiaCliente" value="http://bambu.membresia:8086/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
 		<property name="urlBambuCriteriosDeBusqueda" value="http://10.1.2.56:8086/InformacionTribu.svc/busquedaEnTienda"/>
 		<property name="bambuPalabraSecreate" value="7f9facc418f74439c5e9709832;0ab8a5:OCOdN5Wl,q8SLIQz8i|8agmu¬s13Q7ZXyno/"/>
-		<property name="urlBambuCrearCotizacion" value="/v2/cotizacion"/>
+		<property name="urlBambuCrearCotizacion" value="/InformacionTribu.svc/v2/cotizacion"/>
+		<property name="urlDeLoginConBambuParaSoporte" value="bambuprod"/>
+		<property name="urlBambuParaCrearProducto" value="http://192.168.60.253:8085/InformacionTribu.svc/producto"/>
+		<property name="urlBambuComprador" value="/InformacionTribu.svc/comprador"/>
 	</bean>
 	<!--  FIN Bambu -->
 
@@ -102,7 +105,7 @@
 	<!-- INICIO Beans para la conexión con LN-->
 	<!-- PROD
 		<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
-			<property name="zookeeperUrl" value="192.168.10.26:2190" />
+    			 <property name="logicaNegocios" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 		</bean>
 		QA
 		<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
@@ -110,13 +113,13 @@
 		</bean>
 
 		DEVS -->
-	<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
-		<property name="logicaNegocios" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
+		<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
+			<property name="logicaNegocios" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 	</bean>
 	<!--FIN Beans para la conexión con LN-->
 
 
-	<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
+		<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
@@ -129,9 +132,9 @@
 			-->
 			<array>
 				<value>rdiaz@etechnologiesgroup.com</value>
-			</array>
-		</property>
-		<!-- Suject del correo que se enviará-->
+	    	</array>
+    	</property>
+    	<!-- Suject del correo que se enviará-->
 		<property name="subject" value="Error en la UI de Dev" />
 		<property name="body" value="" />
 		<property name="attachFiles" >
@@ -141,7 +144,7 @@
 			-->
 			<array>
 				<value>/.comercio/logs/Web.log</value>
-			</array>
+	    	</array>
 		</property>
 	</bean>
 

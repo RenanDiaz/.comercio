@@ -4,7 +4,7 @@
           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
           http://www.springframework.org/schema/security
           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
-
+          
 	<http auto-config="true">
 		<!-- Url de App con permisos especiales -->
 		<intercept-url pattern="/*/Proveedores/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_PEDIDOS_EMPLEADO,ROLE_ADMINISTRADOR" />
@@ -33,7 +33,7 @@
 		<intercept-url pattern="/*/CargarDetallesDeDistribuidor/**" access="ROLE_EMPLEADO, ROLE_PEDIDOS_EMPLEADO" />
 		<intercept-url pattern="/*/Pedidos/**" access="ROLE_PEDIDOS_EMPLEADO, ROLE_BODEGUERO" />
 		<intercept-url pattern="/*/Catalogos/**" access="ROLE_PEDIDOS_EMPLEADO, ROLE_SUPERUSUARIO" />
-
+		
 		<!-- Url login y recursos -->
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/Distribuidor/**" />
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/demo/**" />
@@ -49,19 +49,21 @@
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/logout"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/UI/403"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/status"/>
-
+		
 		<!-- Urls de Nimbus Retail -->
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/robots.txt"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/carrito/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/carrito/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/CantidadDeProducto/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/Obtener/Detalle/Del/Carrito/"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/productos"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/nimbus.js"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/asocias.js"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/Membresia.js"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/Buscador/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/Membresia/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/busqueda/**"/>
-		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/Paginacion/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/Paginacion/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/producto/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/producto/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/visita/**"/>
@@ -82,7 +84,6 @@
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/CorreoAlClienteRetail/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/Imagenes/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/miTienda/**"/>
-		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/mitienda/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/fb/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="**/TarjetaDeCredito/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/VPOS/**"/>
@@ -91,11 +92,19 @@
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/rest/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/rest/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/soporte/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/RepoProduccion/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/ruta/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/somoslente/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/departamentos/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/gestordejuegos/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/campanna/**"/>
+		
+		<!-- Asocias -->
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/asociacion/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/asociacion/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/vista/**"/>
-
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/vista/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/preview/**"/>
 
 		<intercept-url access="IS_AUTHENTICATED_FULLY" pattern="/**"/>
 		<form-login login-processing-url="/login" login-page="/loginPage"
@@ -107,9 +116,9 @@
 		<logout logout-url="/logout" logout-success-url="/loginPage" />
 		<access-denied-handler error-page="/UI/403" />
 	</http>
-
+	
 	<beans:bean id="myAuthDetailsSource" class="security.CustomWebAuthenticationDetailsSource" />
-
+	
 	<beans:bean id="proveedorDeAutenticacion" class="com.ts.configuracion.ProveedorDeAutenticacion" />
 	<beans:bean id="authenticationSuccessHandler" class="com.ts.configuracion.SimpleUrlAuthenticationSuccessHandler" />
 
