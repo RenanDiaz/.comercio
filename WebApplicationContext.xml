@@ -21,7 +21,7 @@
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
 		<property name="dominio" value="http://192.168.0.101:8080/" />
-		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />	
+		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
 		<property name="fbAppId" value="913317242063707" />
 		<property name="urlSearchEngine" value="http://searchEngine.ncubo:9200/" />
 		<property name="urlLN" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
@@ -51,12 +51,12 @@
 		<!-- Pedidos properties -->
 		<property name="urlTarjeta" value="http://tarjeta.ncubo:8080" />
 		<property name="idDeComercio" value="Nimbus12345" />
-		<!--  
+		<!--
 		Configuración en de conexción con Lógica de Negocios
 		Se puede usar:
-		1. restConector para devs 
+		1. restConector para devs
 		2. queueConector para qa y produccion
-		-->		
+		-->
 		<property name="conectorConLN" ref="restConector"/>
 		<!-- FIN Configuración en de conexción con Lógica de Negocios -->
 
@@ -82,6 +82,7 @@
 		<property name="urlBambuNotificacionesDeCorreos" value="http://bambu.membresia:9393/Notificaciones.svc/v2/correo"/>
 		<property name="urlBambuMembresiaPlanActual" value="http://bambu.membresia:9075/ServicioMembresias.svc/Membresia?correoDelCliente=%s"/>
 		<property name="urlBambuMembresiaCliente" value="http://bambu.membresia:8086/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
+		<property name="urlBambuCriteriosDeBusqueda" value="http://10.1.2.56:8086/InformacionTribu.svc/busquedaEnTienda"/>
 		<property name="bambuPalabraSecreate" value="7f9facc418f74439c5e9709832;0ab8a5:OCOdN5Wl,q8SLIQz8i|8agmu¬s13Q7ZXyno/"/>
 		<property name="urlBambuCrearCotizacion" value="/v2/cotizacion"/>
 	</bean>
@@ -122,7 +123,7 @@
 		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
 		<property name="password" value="WeUs2kB6" />
 		<property name="mailTo"  >
-			<!-- 
+			<!--
 				Lista de correos que seran notificados cuando un error suceda
 				si <array> está vacio ningun correo será enviado
 			-->
@@ -134,7 +135,7 @@
 		<property name="subject" value="Error en la UI de Dev" />
 		<property name="body" value="" />
 		<property name="attachFiles" >
-			<!-- 
+			<!--
 				Lista de archivos para adjuntar en el correo,
 				Si el archivo pesa más de 5 megas no se adjunta.
 			-->

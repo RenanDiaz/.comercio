@@ -90,6 +90,7 @@
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/NuevoResize/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/rest/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/rest/**"/>
+		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/soporte/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/ruta/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/*/somoslente/**"/>
 		<intercept-url access="IS_AUTHENTICATED_ANONYMOUSLY" pattern="/*/asociacion/**"/>

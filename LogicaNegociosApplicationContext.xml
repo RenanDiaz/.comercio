@@ -18,7 +18,6 @@
 		<property name="usuarioMySQL" value="logwriter" />
 		<property name="passwordMySQL" value="logwriter" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
-		<property name="urlDeWeb" value="https://site.nimbus.ncubo.com/UI/" />
 	</bean>
 	
 	<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
