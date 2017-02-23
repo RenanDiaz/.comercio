@@ -18,7 +18,7 @@
 		<property name="stmpTlsEnabled" value="true" />
 		<property name="stmpPort" value="587" />
 		<property name="stmpAuth" value="true" />
-		<property name="dominioDeUIParaRedirecciones" value="http://192.168.0.101:8080" />
+		<property name="dominioDeUIParaRedirecciones" value="http://192.168.1.65:8080" />
 		<property name="hostDeBackOffice" value="http://backoffice.ncubo/LN/comercios/" />
 		<property name="compania" value="_backoffice" />
 		<property name="hostDelDistribuidor" value="http://web.ncubo:8080" />

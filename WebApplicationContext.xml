@@ -20,7 +20,7 @@
 		<property name="hostDeLaTienda" value="http://app.ncubo:8080" />
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
-		<property name="dominio" value="https://site.nimbus.ncubo.com/" />
+		<property name="dominio" value="http://192.168.1.65/" />
 		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
 		<property name="fbAppId" value="913317242063707" />
 		<property name="urlSearchEngine" value="http://searchEngine.ncubo:9200/" />
