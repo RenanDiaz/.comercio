@@ -10,7 +10,7 @@
 
 	<!-- enabling annotation driven configuration / -->
 	<context:annotation-config />
-	
+
 	<bean id="enviroment" class="com.ncubo.configuracion.Enviroment" init-method="init">
 		<property name="SEConector" ref="SEConector" />
 		<!--  <property name="queueDriverSettings" ref="queueDriver" />-->
@@ -19,7 +19,7 @@
 		<property name="passwordMySQL" value="logwriter" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
 	</bean>
-	
+
 	<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
@@ -33,9 +33,9 @@
 			-->
 			<array>
 				<value>rdiaz@etechnologiesgroup.com</value>
-	    	</array>
-    	</property>
-    	<!-- Suject del correo que se enviará-->
+			</array>
+		</property>
+		<!-- Suject del correo que se enviará-->
 		<property name="subject" value="Error en LN de Dev" />
 		<property name="body" value="" />
 		<property name="attachFiles" >
@@ -45,7 +45,7 @@
 			-->
 			<array>
 				<value>/.comercio/logs/LN.log</value>
-	    	</array>
+			</array>
 		</property>
 	</bean>
 	<!--

@@ -52,9 +52,9 @@
 			<tx:method name="*" />
 		</tx:attributes>
 	</tx:advice>
-	
+
 	<context:component-scan base-package="com.ts.spring" />
-	
+
 	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
@@ -62,7 +62,7 @@
 	<bean id="clienteDAO" class="com.ts.spring.dao.ClienteDAOImpl">
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
-	
+
 	<bean id="clienteService" class="com.ts.spring.service.ClienteServiceImpl">
 		<property name="clienteDAO" ref="clienteDAO" />
 	</bean>
@@ -70,11 +70,11 @@
 	<bean id="usuarioDAO" class="com.ts.spring.dao.UsuarioDAOImpl">
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
-	
+
 	<bean id="detallesDeUsuarioService" class="com.ts.spring.service.DetallesDeUsuarioService">
 		<property name="usuarioDAO" ref="usuarioDAO" />
 	</bean>
-	
+
 	<aop:config>
 		<aop:pointcut expression="execution(* com.ts.spring.service.*Service.*(..))" id="userServicePointCut"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="userServicePointCut"/>

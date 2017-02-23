@@ -50,7 +50,7 @@
 		<property name="urlWebs" value="http://web.ncubo:8080/"/>
 		<!-- Pedidos properties -->
 		<property name="urlTarjeta" value="http://tarjeta.ncubo:8080" />
-  		<property name="idDeComercio" value="Nimbus12345" />
+		<property name="idDeComercio" value="Nimbus12345" />
 		<!--
 		Configuración en de conexción con Lógica de Negocios
 		Se puede usar:
@@ -113,13 +113,13 @@
 		</bean>
 
 		DEVS -->
-		<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
-			<property name="logicaNegocios" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
+	<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
+		<property name="logicaNegocios" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 	</bean>
 	<!--FIN Beans para la conexión con LN-->
 
 
-		<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
+	<!-- Este bean es para los configuraciones de loe mensajes de error que van a ser enviados al equipo de Nimbus en ncubo-->
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
@@ -132,9 +132,9 @@
 			-->
 			<array>
 				<value>rdiaz@etechnologiesgroup.com</value>
-	    	</array>
-    	</property>
-    	<!-- Suject del correo que se enviará-->
+			</array>
+		</property>
+		<!-- Suject del correo que se enviará-->
 		<property name="subject" value="Error en la UI de Dev" />
 		<property name="body" value="" />
 		<property name="attachFiles" >
@@ -144,7 +144,7 @@
 			-->
 			<array>
 				<value>/.comercio/logs/Web.log</value>
-	    	</array>
+			</array>
 		</property>
 	</bean>
 

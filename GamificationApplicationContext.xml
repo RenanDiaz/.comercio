@@ -13,9 +13,9 @@
 		<beans:property name="usuarioMySQL" value="logwriter" />
 		<beans:property name="passwordMySQL" value="logwriter" />
 	</beans:bean>
-	
 
-	
-	
-	
+
+
+
+
 </beans:beans>
