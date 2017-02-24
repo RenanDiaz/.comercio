@@ -24,7 +24,7 @@
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
-		<property name="mailFrom" value="ncuboqa@gmail.com" />
+		<property name="mailFrom" value="nimbusqa17@gmail.com" />
 		<property name="password" value="nimbus123" />
 		<property name="mailTo"  >
 			<!-- 

@@ -9,8 +9,8 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<bean id="enviroment" class="com.ts.configuracion.Enviroment" init-method="init">
-		<property name="claveMail" value="WeUs2kB61" />
-		<property name="direccionMail" value="no-reply-nimbus@ncubo.com" />
+		<property name="claveMail" value="nimbus123" />
+		<property name="direccionMail" value="nimbusqa17@gmail.com" />
 		<property name="stmpHost" value="smtp.gmail.com" />
 		<property name="stmpTlsEnabled" value="true" />
 		<property name="stmpPort" value="587" />
@@ -123,8 +123,8 @@
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
-		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
-		<property name="password" value="WeUs2kB6" />
+		<property name="mailFrom" value="nimbusqa17@gmail.com" />
+		<property name="password" value="nimbus123" />
 		<property name="mailTo"  >
 			<!--
 				Lista de correos que seran notificados cuando un error suceda
