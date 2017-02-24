@@ -82,11 +82,11 @@
 		<property name="urlBambuNotificacionesDeCorreos" value="http://bambu.membresia:9393/Notificaciones.svc/v2/correo"/>
 		<property name="urlBambuMembresiaPlanActual" value="http://bambu.membresia:9075/ServicioMembresias.svc/Membresia?correoDelCliente=%s"/>
 		<property name="urlBambuMembresiaCliente" value="http://bambu.membresia:8086/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
-		<property name="urlBambuCriteriosDeBusqueda" value="http://10.1.2.56:8086/InformacionTribu.svc/busquedaEnTienda"/>
+		<property name="urlBambuCriteriosDeBusqueda" value="http://bambu.membresia:8086/InformacionTribu.svc/busquedaEnTienda"/>
 		<property name="bambuPalabraSecreate" value="7f9facc418f74439c5e9709832;0ab8a5:OCOdN5Wl,q8SLIQz8i|8agmu¬s13Q7ZXyno/"/>
 		<property name="urlBambuCrearCotizacion" value="/InformacionTribu.svc/v2/cotizacion"/>
 		<property name="urlDeLoginConBambuParaSoporte" value="bambuprod"/>
-		<property name="urlBambuParaCrearProducto" value="http://192.168.60.253:8085/InformacionTribu.svc/producto"/>
+		<property name="urlBambuParaCrearProducto" value="http://bambu.membresia:8085/InformacionTribu.svc/producto"/>
 		<property name="urlBambuComprador" value="/InformacionTribu.svc/comprador"/>
 	</bean>
 	<!--  FIN Bambu -->
