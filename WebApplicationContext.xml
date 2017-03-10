@@ -50,6 +50,8 @@
 		<property name="urlWebs" value="http://web.ncubo:8080/"/>
 		<!-- Pedidos properties -->
 		<property name="urlTarjeta" value="http://tarjeta.ncubo:8080" />
+		<property name="urlPruebasTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
+		<property name="urlProduccionTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
 		<property name="idDeComercio" value="Nimbus12345" />
 		<!--
 		Configuración en de conexción con Lógica de Negocios
