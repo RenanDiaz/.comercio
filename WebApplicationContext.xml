@@ -9,18 +9,18 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<bean id="enviroment" class="com.ts.configuracion.Enviroment" init-method="init">
-		<property name="claveMail" value="WeUs2kB6" />
-		<property name="direccionMail" value="no-reply-nimbus@ncubo.com" />
+		<property name="claveMail" value="nimbus123" />
+		<property name="direccionMail" value="nimbusqa17@gmail.com" />
 		<property name="stmpHost" value="smtp.gmail.com" />
 		<property name="stmpTlsEnabled" value="true" />
 		<property name="stmpPort" value="587" />
 		<property name="stmpAuth" value="true" />
-		<property name="urlDeRepoDesdeInternet" value="http://10.0.1.3:8080/Repo" />
-		<property name="urlBackOffice" value="http://10.0.1.3:8080/BackOffice/"/>
-		<property name="hostDeLaTienda" value="http://10.0.1.3:8080" />
+		<property name="urlDeRepoDesdeInternet" value="http://192.168.1.65:8080/Repo" />
+		<property name="urlBackOffice" value="http://backoffice.ncubo:8080/BackOffice/"/>
+		<property name="hostDeLaTienda" value="http://app.ncubo:8080" />
 		<property name="modoJuego" value="false" />
 		<property name="modoDesarrollo" value="true" />
-		<property name="dominio" value="http://10.0.1.3:8080/" />
+		<property name="dominio" value="http://192.168.1.65:8080/" />
 		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
 		<property name="fbAppId" value="913317242063707" />
 		<property name="urlSearchEngine" value="http://10.0.1.3:9200/" />
@@ -50,6 +50,8 @@
 		<property name="urlWebs" value="http://10.0.1.3:8080/"/>
 		<!-- Pedidos properties -->
 		<property name="urlTarjeta" value="http://10.0.1.3:8080" />
+		<property name="urlPruebasTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
+		<property name="urlProduccionTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
 		<property name="idDeComercio" value="Nimbus12345" />
 		<!--
 		Configuración en de conexción con Lógica de Negocios
@@ -82,8 +84,12 @@
 		<property name="urlBambuNotificacionesDeCorreos" value="http://10.1.2.56:9393/Notificaciones.svc/v2/correo"/>
 		<property name="urlBambuMembresiaPlanActual" value="http://10.1.2.56:9075/ServicioMembresias.svc/Membresia?correoDelCliente=%s"/>
 		<property name="urlBambuMembresiaCliente" value="http://10.1.2.56:8086/InformacionTribu.svc/cliente?correoDelCliente=%s"/>
+		<property name="urlBambuCriteriosDeBusqueda" value="http://10.1.2.56:8086/InformacionTribu.svc/busquedaEnTienda"/>
 		<property name="bambuPalabraSecreate" value="7f9facc418f74439c5e9709832;0ab8a5:OCOdN5Wl,q8SLIQz8i|8agmu¬s13Q7ZXyno/"/>
-		<property name="urlBambuCrearCotizacion" value="/v2/cotizacion"/>
+		<property name="urlBambuCrearCotizacion" value="/InformacionTribu.svc/v2/cotizacion"/>
+		<property name="urlDeLoginConBambuParaSoporte" value="bambuprod"/>
+		<property name="urlBambuParaCrearProducto" value="http://bambu.membresia:8085/InformacionTribu.svc/producto"/>
+		<property name="urlBambuComprador" value="/InformacionTribu.svc/comprador"/>
 	</bean>
 	<!--  FIN Bambu -->
 
@@ -101,7 +107,7 @@
 	<!-- INICIO Beans para la conexión con LN-->
 	<!-- PROD
 		<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
-			<property name="zookeeperUrl" value="192.168.10.26:2190" />
+    			 <property name="logicaNegocios" value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 		</bean>
 		QA
 		<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
@@ -119,8 +125,8 @@
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
-		<property name="mailFrom" value="no-reply-nimbus@ncubo.com" />
-		<property name="password" value="WeUs2kB6" />
+		<property name="mailFrom" value="nimbusqa17@gmail.com" />
+		<property name="password" value="nimbus123" />
 		<property name="mailTo"  >
 			<!--
 				Lista de correos que seran notificados cuando un error suceda
