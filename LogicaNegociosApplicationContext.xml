@@ -14,7 +14,7 @@
 	<bean id="enviroment" class="com.ncubo.configuracion.Enviroment" init-method="init">
 		<property name="SEConector" ref="SEConector" />
 		<!--  Comentar esto para el ambiente de los devs <property name="queueDriverSettings" ref="queueDriver" />-->
-		<property name="connectionMySQL" value="jdbc:mysql://10.0.1.3:3306/nimbus" />
+		<property name="connectionMySQL" value="jdbc:mysql://192.168.1.3:3306/nimbus" />
 		<property name="usuarioMySQL" value="logwriter" />
 		<property name="passwordMySQL" value="logwriter" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
@@ -56,7 +56,7 @@
 	</bean>-->
 
 	<bean id="SEConector" class="com.ncubo.searchEngine.SEConector">
-		<constructor-arg value="http://10.0.1.3:9200/"/>
+		<constructor-arg value="http://192.168.1.3:9200/"/>
 		<constructor-arg ref="emailErrorConfiguration" />
 	</bean>
 </beans>

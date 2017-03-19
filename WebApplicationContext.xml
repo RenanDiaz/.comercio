@@ -23,12 +23,12 @@
 		<property name="dominio" value="http://192.168.1.65:8080/" />
 		<property name="fbInstallPath" value="https://site.nimbus.ncubo.com/UI/fb/Registrar/" />
 		<property name="fbAppId" value="913317242063707" />
-		<property name="urlSearchEngine" value="http://10.0.1.3:9200/" />
-		<property name="urlLN" value="http://10.0.1.3:8080/LN/comercios/" />
+		<property name="urlSearchEngine" value="http://192.168.1.3:9200/" />
+		<property name="urlLN" value="http://192.168.1.3:8080/LN/comercios/" />
 		<property name="portSearchEngine" value="9200" />
 		<property name="clusterNameSearchEngine" value="distribuidoranimbustech" />
-		<property name="hostBackOfficeTarjeta" value="http://10.0.1.3:8080/BackOfficeMola" />
-		<property name="urlTarjetas" value="http://10.0.1.3:8080/Tarjetas" />
+		<property name="hostBackOfficeTarjeta" value="http://192.168.1.3:8080/BackOfficeMola" />
+		<property name="urlTarjetas" value="http://192.168.1.3:8080/Tarjetas" />
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
 		<property name="correoDelAdministradorDeNimbus" value="Usuario_14"/>
 		<property name="urlJasperServer" value="https://site.nimbus.ncubo.com/jasperserver/flow.html?_flowId=viewReportFlow" />
@@ -46,10 +46,10 @@
 		<property name="paypalUserNamePruebas" value="jb-us-seller_api1.paypal.com"/>
 		<property name="paypalPasswordPruebas" value="WX4WTU3S8MY44S7F"/>
 		<property name="paypalSignaturePruebas" value="AFcWxV21C7fd0v3bYYYRCpSSRl31A7yDhhsPUU2XhtMoZXsWHFxu-RWy"/>
-		<property name="hostTarjeta" value="http://10.0.1.3:8080/Tarjetas" />
-		<property name="urlWebs" value="http://10.0.1.3:8080/"/>
+		<property name="hostTarjeta" value="http://192.168.1.3:8080/Tarjetas" />
+		<property name="urlWebs" value="http://192.168.1.3:8080/"/>
 		<!-- Pedidos properties -->
-		<property name="urlTarjeta" value="http://10.0.1.3:8080" />
+		<property name="urlTarjeta" value="http://192.168.1.3:8080" />
 		<property name="urlPruebasTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
 		<property name="urlProduccionTarjetas" value="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" />
 		<property name="idDeComercio" value="Nimbus12345" />
@@ -116,7 +116,7 @@
 
 		DEVS -->
 	<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
-		<property name="logicaNegocios" value="http://10.0.1.3:8080/LN/comercios/" />
+		<property name="logicaNegocios" value="http://192.168.1.3:8080/LN/comercios/" />
 	</bean>
 	<!--FIN Beans para la conexión con LN-->
 

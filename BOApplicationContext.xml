@@ -18,16 +18,16 @@
 		<property name="stmpTlsEnabled" value="true" />
 		<property name="stmpPort" value="587" />
 		<property name="stmpAuth" value="true" />
-		<property name="dominioDeUIParaRedirecciones" value="http://10.0.1.3:8080" />
-		<property name="hostDeBackOffice" value="http://10.0.1.3/LN/comercios/" />
+		<property name="dominioDeUIParaRedirecciones" value="http://192.168.1.3:8080" />
+		<property name="hostDeBackOffice" value="http://192.168.1.3/LN/comercios/" />
 		<property name="compania" value="_backoffice" />
-		<property name="hostDelDistribuidor" value="http://10.0.1.3:8080" />
-		<property name="urlRepo" value="http://10.0.1.3:8080/Repo" />
-		<property name="hostDeLaTienda" value="http://10.0.1.3:8080" />
+		<property name="hostDelDistribuidor" value="http://192.168.1.3:8080" />
+		<property name="urlRepo" value="http://192.168.1.3:8080/Repo" />
+		<property name="hostDeLaTienda" value="http://192.168.1.3:8080" />
 		<property name="correoDelAdministradorDeNimbus" value="Usuario_14"/>
 		<property name="urlBambuMuro" value="http://10.1.2.56:8080/"/>
 		<property name="urlMembresia" value="http://10.1.2.56:8086/InformacionTribu.svc/cliente"/>
-		<property name="urlDeTarjetas" value="http://10.0.1.3:8080/Tarjetas"/>
+		<property name="urlDeTarjetas" value="http://192.168.1.3:8080/Tarjetas"/>
 		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
 
 		<!-- FIN Conexión con otros servers	 -->
@@ -84,7 +84,7 @@
 		<constructor-arg value="http://logicaNegocios.ncubo:8080/LN/comercios/" />
 	</bean>-->
 	<bean id="restConector" class="com.ts.configuracion.Api2FactoryManager">
-		<property name="logicaNegocios" value="http://10.0.1.3:8080/LN/comercios/" />
+		<property name="logicaNegocios" value="http://192.168.1.3:8080/LN/comercios/" />
 	</bean>
 	<!-- FIN Beans para la conexión con LN-->
 
