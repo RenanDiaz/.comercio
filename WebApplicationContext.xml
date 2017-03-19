@@ -15,7 +15,7 @@
 		<property name="stmpTlsEnabled" value="true" />
 		<property name="stmpPort" value="587" />
 		<property name="stmpAuth" value="true" />
-		<property name="urlDeRepoDesdeInternet" value="http://192.168.1.65:8080/Repo" />
+		<property name="urlDeRepoDesdeInternet" value="http://192.168.1.3:8080/Repo" />
 		<property name="urlBackOffice" value="http://backoffice.ncubo:8080/BackOffice/"/>
 		<property name="hostDeLaTienda" value="http://app.ncubo:8080" />
 		<property name="modoJuego" value="false" />
