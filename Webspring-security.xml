@@ -15,6 +15,7 @@
 		<intercept-url pattern="/*/comercio/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/CuentasPorPagar/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/Pedidos/**" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
+		<intercept-url pattern="/*/*/*/solicitud/*" access="ROLE_PEDIDOS_ADMINISTRADOR,ROLE_ADMINISTRADOR" />
 		<!-- Url de panel con permisos especiales -->
 		<intercept-url pattern="/*/Contactos/**" access="ROLE_ADMINISTRADOR" />
 		<intercept-url pattern="/*/Cuentas/**" access="ROLE_AUXILIAR_CONTABLE" />

@@ -11,8 +11,8 @@
 
 	<bean id="enviroment" class="com.ts.configuracion.EnviromentBO" init-method="init">
 		<!-- Conexión con otros servers  -->
-		<property name="claveMail" value="nimbus123" />
-		<property name="direccionMail" value="nimbusqa17@gmail.com" />
+		<property name="claveMail" value="Rdiaz123" />
+		<property name="direccionMail" value="rdiaz+nimbusqa@cecropiasolutions.com" />
 		<property name="direccionMailDeBO" value="fmartinez@ncubo.com" />
 		<property name="stmpHost" value="smtp.gmail.com" />
 		<property name="stmpTlsEnabled" value="true" />
@@ -28,7 +28,7 @@
 		<property name="urlBambuMuro" value="http://bambu.muro:8080/"/>
 		<property name="urlMembresia" value="http://bambu.membresia:8086/InformacionTribu.svc/cliente"/>
 		<property name="urlDeTarjetas" value="http://tarjeta.ncubo:8080/Tarjetas"/>
-		<property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/>
+		<!-- <property name="emailErrorsConfiguration" ref="emailErrorConfiguration"/> -->
 
 		<!-- FIN Conexión con otros servers	 -->
 		<!-- Configuracion de tarjetas de crédito -->
@@ -104,32 +104,32 @@
 		</property>
 	</bean>
 
-	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
+	<!-- <bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
-		<property name="mailFrom" value="nimbusqa17@gmail.com" />
-		<property name="password" value="nimbus123" />
-		<property name="mailTo"  >
+		<property name="mailFrom" value="rdiaz+nimbusqa@cecropiasolutions.com" />
+		<property name="password" value="Rdiaz123" />
+		<property name="mailTo"  > -->
 			<!--
 				Lista de correos que seran notificados cuando un error suceda
 				si <array> está vacio ningun correo será enviado
 			-->
-			<array>
+			<!-- <array>
 				<value>rdiaz@etechnologiesgroup.com</value>
 			</array>
-		</property>
+		</property> -->
 		<!-- Suject del correo que se enviará-->
-		<property name="subject" value="Error en la BO de Dev " />
+		<!-- <property name="subject" value="Error en la BO de Dev " />
 		<property name="body" value="" />
-		<property name="attachFiles" >
+		<property name="attachFiles" > -->
 			<!--
 				Lista de archivos para adjuntar en el correo,
 				Si el archivo pesa más de 5 megas no se adjunta.
 			-->
-			<array>
+			<!-- <array>
 				<value>/.comercio/logs/BO.log</value>
 			</array>
 		</property>
-	</bean>
+	</bean> -->
 
 </beans>

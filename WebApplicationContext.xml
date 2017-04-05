@@ -9,8 +9,8 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<bean id="enviroment" class="com.ts.configuracion.Enviroment" init-method="init">
-		<property name="claveMail" value="nimbus123" />
-		<property name="direccionMail" value="nimbusqa17@gmail.com" />
+		<property name="claveMail" value="Rdiaz123" />
+		<property name="direccionMail" value="rdiaz+nimbusqa@cecropiasolutions.com" />
 		<property name="stmpHost" value="smtp.gmail.com" />
 		<property name="stmpTlsEnabled" value="true" />
 		<property name="stmpPort" value="587" />
@@ -35,7 +35,7 @@
 		<property name="produccion" value="false" />
 		<property name="distribuidorNcubo" value="ncubo" />
 		<property name="modoMembresia" value="false" />
-		<property name="modoNimbusPedidos" value="false" />
+		<property name="modoNimbusPedidos" value="true" />
 		<!-- Retail properties -->
 		<property name="fbCredentials" ref="fbPruebasCredenciales" />
 		<property name="paypalAppID" value="APP-6H400807N5091300N"/>
@@ -125,8 +125,8 @@
 	<bean id="emailErrorConfiguration" class="com.ncubo.email.EmailConfiguration" >
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
-		<property name="mailFrom" value="nimbusqa17@gmail.com" />
-		<property name="password" value="nimbus123" />
+		<property name="mailFrom" value="rdiaz+nimbusqa@cecropiasolutions.com" />
+		<property name="password" value="Rdiaz123" />
 		<property name="mailTo"  >
 			<!--
 				Lista de correos que seran notificados cuando un error suceda
